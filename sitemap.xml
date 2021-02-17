@@ -3,12 +3,17 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://nebelgrau77.github.io/posts/frist_psot/</loc>
-    <lastmod>2021-02-17T13:12:05+01:00</lastmod>
+    <loc>https://nebelgrau77.github.io/posts/</loc>
+    <lastmod>2021-02-17T20:58:35+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://nebelgrau77.github.io/posts/</loc>
+    <loc>https://nebelgrau77.github.io/posts/second_post/</loc>
+    <lastmod>2021-02-17T20:58:35+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://nebelgrau77.github.io/posts/frist_psot/</loc>
     <lastmod>2021-02-17T13:12:05+01:00</lastmod>
   </url>
   

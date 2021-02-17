@@ -12,6 +12,15 @@
     
     
     <item>
+      <title>Second_post</title>
+      <link>https://nebelgrau77.github.io/posts/second_post/</link>
+      <pubDate>Wed, 17 Feb 2021 20:58:35 +0100</pubDate>
+      
+      <guid>https://nebelgrau77.github.io/posts/second_post/</guid>
+      <description>Some more testing if this works.</description>
+    </item>
+    
+    <item>
       <title>Frist_psot</title>
       <link>https://nebelgrau77.github.io/posts/frist_psot/</link>
       <pubDate>Wed, 17 Feb 2021 13:12:05 +0100</pubDate>
