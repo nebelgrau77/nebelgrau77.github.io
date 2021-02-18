@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Frist_psot &middot; NBG77</title>
+  <title>First post &middot; NBG77</title>
   <meta name="description" content="" />
 
   
@@ -50,9 +50,23 @@
 
     <main class="content container">
     <div class="post">
-  <h1>Frist_psot</h1>
+  <h1>First post</h1>
   <time datetime=2021-02-17T13:12:05&#43;0100 class="post-date">Wed, Feb 17, 2021</time>
-  <p>Another test, to see if blog posts can be somehow stored together.</p>
+  <h3 id="my-embedded-experiments">My embedded experiments</h3>
+<p>This is yet another test of what I would like to show here. I want to talk about tinkering with embedded devices in Rust.
+Why embedded, and why Rust? Because:</p>
+<ul>
+<li>it&rsquo;s cool</li>
+<li>I like it</li>
+<li>I&rsquo;m learning new things!</li>
+</ul>
+<p>So in embedded Rust, you start with something like this:</p>
+<pre><code>#[no_main]
+#[no_std]
+
+use panic_halt as _;
+</code></pre><p>And after you add some more code to initialize various element of the microcontroller and such, you can see something like this:</p>
+<p><img src="HTS_Sense.jpg" alt="BLESense"></p>
 
 </div>
 

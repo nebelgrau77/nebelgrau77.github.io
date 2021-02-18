@@ -21,12 +21,14 @@
     </item>
     
     <item>
-      <title>Frist_psot</title>
+      <title>First post</title>
       <link>https://nebelgrau77.github.io/posts/frist_psot/</link>
       <pubDate>Wed, 17 Feb 2021 13:12:05 +0100</pubDate>
       
       <guid>https://nebelgrau77.github.io/posts/frist_psot/</guid>
-      <description>Another test, to see if blog posts can be somehow stored together.</description>
+      <description>My embedded experiments This is yet another test of what I would like to show here. I want to talk about tinkering with embedded devices in Rust. Why embedded, and why Rust? Because:
+ it&amp;rsquo;s cool I like it I&amp;rsquo;m learning new things!  So in embedded Rust, you start with something like this:
+#[no_main] #[no_std] use panic_halt as _; And after you add some more code to initialize various element of the microcontroller and such, you can see something like this:</description>
     </item>
     
   </channel>
