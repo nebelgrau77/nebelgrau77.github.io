@@ -6,7 +6,7 @@
     <description>Recent content on NBG77</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 16 Feb 2021 21:58:01 +0100</lastBuildDate>
+    <lastBuildDate>Wed, 17 Feb 2021 20:58:35 +0100</lastBuildDate>
     
 	<atom:link href="https://nebelgrau77.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -33,10 +33,10 @@
     
     <item>
       <title>About</title>
-      <link>https://nebelgrau77.github.io/about/</link>
+      <link>https://nebelgrau77.github.io/about/about/</link>
       <pubDate>Tue, 16 Feb 2021 21:58:01 +0100</pubDate>
       
-      <guid>https://nebelgrau77.github.io/about/</guid>
+      <guid>https://nebelgrau77.github.io/about/about/</guid>
       <description>Hello, world! I added some tweaks to the theme, hopefully they work :)
 Let&amp;rsquo;s see if I can use markdown:
 A code example  short simple  print(&amp;#39;Hello, world!&amp;#39;) </description>
