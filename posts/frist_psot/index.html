@@ -61,11 +61,11 @@ Why embedded, and why Rust? Because:</p>
 <li>I&rsquo;m learning new things!</li>
 </ul>
 <p>So in embedded Rust, you start with something like this:</p>
-<pre><code>#[no_main]
-#[no_std]
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rust" data-lang="rust"><span style="color:#75715e">#[no_main]</span>
+<span style="color:#75715e">#[no_std]</span>
 
-use panic_halt as _;
-</code></pre><p>And after you add some more code to initialize various element of the microcontroller and such, you can see something like this:</p>
+<span style="color:#66d9ef">use</span> panic_halt <span style="color:#66d9ef">as</span> _;
+</code></pre></div><p>And after you add some more code to initialize various element of the microcontroller and such, you can see something like this:</p>
 <p><img src="/img/HTS_Sense.jpg" alt="BLESense"></p>
 
 </div>
