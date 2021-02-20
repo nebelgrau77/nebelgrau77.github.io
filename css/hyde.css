@@ -65,7 +65,7 @@ html {
     top: 0;
     left: 0;
     bottom: 0;
-    width: 18rem;
+    width: 16rem;
     text-align: left;
   }
 }
@@ -80,7 +80,7 @@ html {
   color: #fff;
   margin-top: 0;
   font-family: "Notable", sans-serif;
-  font-size: 3.50rem;
+  font-size: 3.00rem;
 }
 
 /* Sidebar nav */
@@ -166,7 +166,9 @@ a.sidebar-nav-item:focus {
   }
 }
 
-
+ul {
+  list-style-type: circle;
+}
 
 /*
  * Themes
