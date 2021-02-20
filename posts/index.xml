@@ -12,16 +12,16 @@
     
     
     <item>
-      <title>Second_post</title>
+      <title>Second post</title>
       <link>https://nebelgrau77.github.io/posts/second_post/</link>
       <pubDate>Wed, 17 Feb 2021 20:58:35 +0100</pubDate>
       
       <guid>https://nebelgrau77.github.io/posts/second_post/</guid>
-      <description>Some more testing if this works.</description>
+      <description>This will be another post: just trying to find out how Hugo works!</description>
     </item>
     
     <item>
-      <title>First post</title>
+      <title>Embedded Rust is fun!</title>
       <link>https://nebelgrau77.github.io/posts/frist_psot/</link>
       <pubDate>Wed, 17 Feb 2021 13:12:05 +0100</pubDate>
       
