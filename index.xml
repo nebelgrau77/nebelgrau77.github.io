@@ -12,6 +12,16 @@
     
     
     <item>
+      <title>Oxidizing the BLE Sense board</title>
+      <link>https://nebelgrau77.github.io/posts/oxidizing_ble/</link>
+      <pubDate>Sat, 20 Feb 2021 20:56:21 +0100</pubDate>
+      
+      <guid>https://nebelgrau77.github.io/posts/oxidizing_ble/</guid>
+      <description>How to run Rust on Arduino Nano 33 BLE Sense? - DRAFT things I want to write about:
+ Arduino 33 BLE Sense - what&amp;rsquo;s it good for, why did I get one? Why would I want to use Rust with it, what&amp;rsquo;s wrong with Arduino code? How to make a bootloader? How to get Arduino connected to J-Link/BMP? How to flash the bootloader? What to do later:  memory.x and SoftDevice target definition nRF-HAL simple blinkenlight   How to get the sensors to work?</description>
+    </item>
+    
+    <item>
       <title>Home</title>
       <link>https://nebelgrau77.github.io/home/home/</link>
       <pubDate>Sat, 20 Feb 2021 15:51:47 +0100</pubDate>
@@ -22,10 +32,10 @@
     
     <item>
       <title>Embedded Rust is fun!</title>
-      <link>https://nebelgrau77.github.io/posts/frist_psot/</link>
+      <link>https://nebelgrau77.github.io/posts/embedded_rust_is_fun_test/</link>
       <pubDate>Wed, 17 Feb 2021 13:12:05 +0100</pubDate>
       
-      <guid>https://nebelgrau77.github.io/posts/frist_psot/</guid>
+      <guid>https://nebelgrau77.github.io/posts/embedded_rust_is_fun_test/</guid>
       <description>My embedded experiments This is yet another test of what I would like to show here. I want to talk about tinkering with embedded devices in Rust. Why embedded, and why Rust? Because:
  it&amp;rsquo;s cool I like it I&amp;rsquo;m learning new things!  So in embedded Rust, you start with something like this:
 #[no_main] #[no_std] use panic_halt as _; And after you add some more code to initialize various element of the microcontroller and such, you can see something like this:</description>
@@ -52,15 +62,6 @@ Somewhere towards the end of 2017 I decided to learn something about data scienc
 Let me unpack all that!
 Somewhere towards the end of 2017 I decided to learn something about data science, so I found out about Python.
 I was curious about electronics, too, and thought this would help me learn programming in general, so I also started tinkering with MicroPython on Espressif and STM32 devices.</description>
-    </item>
-    
-    <item>
-      <title>Second post</title>
-      <link>https://nebelgrau77.github.io/posts/second_post/</link>
-      <pubDate>Fri, 01 Jan 2021 20:58:35 +0100</pubDate>
-      
-      <guid>https://nebelgrau77.github.io/posts/second_post/</guid>
-      <description>This will be another post: just trying to find out how Hugo works!</description>
     </item>
     
   </channel>
