@@ -269,3 +269,12 @@ ul {
 .theme-base-10 .related-posts li a:hover {
   color: #051728;
 }
+
+/* Chromablack blue */
+.theme-base-12 .sidebar {
+  background-color: #100e1a;
+}
+.theme-base-10 .content a,
+.theme-base-10 .related-posts li a:hover {
+  color: #051728;
+}
