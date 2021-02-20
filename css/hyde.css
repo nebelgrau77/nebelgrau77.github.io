@@ -46,6 +46,17 @@ html {
 }
 
 
+.author-image {
+  border-radius: 5px;
+  height: 125px;
+  width: 250px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+
 /*
  * Sidebar
  *
@@ -169,6 +180,8 @@ a.sidebar-nav-item:focus {
 ul {
   list-style-type: circle;
 }
+
+
 
 /*
  * Themes

@@ -12,6 +12,15 @@
     
     
     <item>
+      <title>Home</title>
+      <link>https://nebelgrau77.github.io/home/home/</link>
+      <pubDate>Sat, 20 Feb 2021 15:51:47 +0100</pubDate>
+      
+      <guid>https://nebelgrau77.github.io/home/home/</guid>
+      <description>This is the main page </description>
+    </item>
+    
+    <item>
       <title>Embedded Rust is fun!</title>
       <link>https://nebelgrau77.github.io/posts/frist_psot/</link>
       <pubDate>Wed, 17 Feb 2021 13:12:05 +0100</pubDate>
@@ -28,7 +37,9 @@
       <pubDate>Tue, 16 Feb 2021 21:58:01 +0100</pubDate>
       
       <guid>https://nebelgrau77.github.io/about/</guid>
-      <description> Aspiring data witcher. Machine/Deep Learning on embedded Arm devices (TinyML). Rustacean and Pythonista.  </description>
+      <description>I&amp;rsquo;m Michał, a.k.a. Nebelgrau. Self-described as an &amp;ldquo;aspiring data witcher, wannabe embedded Rustacean, Pythonista and TinyML afficionado&amp;rdquo; :)
+Let me unpack all that!
+Somewhere towards the end of 2017 I decided to learn something about data science, so I found out about Python and started with that. I was curious about electronics, and thought this would help me learn programming in general, so I also started tinkering with MicroPython on Espressif and STM32 devices.</description>
     </item>
     
     <item>
@@ -37,7 +48,10 @@
       <pubDate>Tue, 16 Feb 2021 21:58:01 +0100</pubDate>
       
       <guid>https://nebelgrau77.github.io/about/about/</guid>
-      <description> Aspiring data witcher. Machine/Deep Learning on embedded Arm devices (TinyML). Rustacean and Pythonista.  </description>
+      <description>I&amp;rsquo;m Michał, a.k.a. Nebelgrau. Self-described as an &amp;ldquo;aspiring data witcher, wannabe embedded Rustacean, Pythonista and TinyML afficionado&amp;rdquo; :)
+Let me unpack all that!
+Somewhere towards the end of 2017 I decided to learn something about data science, so I found out about Python.
+I was curious about electronics, too, and thought this would help me learn programming in general, so I also started tinkering with MicroPython on Espressif and STM32 devices.</description>
     </item>
     
     <item>
