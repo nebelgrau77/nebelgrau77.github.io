@@ -57,7 +57,7 @@ html {
   text-align: center;
   padding: 2rem 1rem;
   color: rgba(255,255,255,.5);
-  background-color: #202020;
+  background-color: #ff0000;
 }
 @media (min-width: 48em) {
   .sidebar {
@@ -252,6 +252,16 @@ a.sidebar-nav-item:focus {
 /* Darkblue */
 .theme-base-10 .sidebar {
   background-color: #051728;
+}
+.theme-base-10 .content a,
+.theme-base-10 .related-posts li a:hover {
+  color: #051728;
+}
+
+
+/* Darkred */
+.theme-base-11 .sidebar {
+  background-color: #360009;
 }
 .theme-base-10 .content a,
 .theme-base-10 .related-posts li a:hover {

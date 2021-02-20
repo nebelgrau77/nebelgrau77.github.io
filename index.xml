@@ -12,15 +12,6 @@
     
     
     <item>
-      <title>Second post</title>
-      <link>https://nebelgrau77.github.io/posts/second_post/</link>
-      <pubDate>Wed, 17 Feb 2021 20:58:35 +0100</pubDate>
-      
-      <guid>https://nebelgrau77.github.io/posts/second_post/</guid>
-      <description>This will be another post: just trying to find out how Hugo works!</description>
-    </item>
-    
-    <item>
       <title>Embedded Rust is fun!</title>
       <link>https://nebelgrau77.github.io/posts/frist_psot/</link>
       <pubDate>Wed, 17 Feb 2021 13:12:05 +0100</pubDate>
@@ -47,6 +38,15 @@
       
       <guid>https://nebelgrau77.github.io/about/about/</guid>
       <description> Aspiring data witcher. Machine/Deep Learning on embedded Arm devices (TinyML). Rustacean and Pythonista.  </description>
+    </item>
+    
+    <item>
+      <title>Second post</title>
+      <link>https://nebelgrau77.github.io/posts/second_post/</link>
+      <pubDate>Fri, 01 Jan 2021 20:58:35 +0100</pubDate>
+      
+      <guid>https://nebelgrau77.github.io/posts/second_post/</guid>
+      <description>This will be another post: just trying to find out how Hugo works!</description>
     </item>
     
   </channel>

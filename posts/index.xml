@@ -6,19 +6,10 @@
     <description>Recent content in Posts on NBG77</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 17 Feb 2021 20:58:35 +0100</lastBuildDate>
+    <lastBuildDate>Wed, 17 Feb 2021 13:12:05 +0100</lastBuildDate>
     
 	<atom:link href="https://nebelgrau77.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Second post</title>
-      <link>https://nebelgrau77.github.io/posts/second_post/</link>
-      <pubDate>Wed, 17 Feb 2021 20:58:35 +0100</pubDate>
-      
-      <guid>https://nebelgrau77.github.io/posts/second_post/</guid>
-      <description>This will be another post: just trying to find out how Hugo works!</description>
-    </item>
     
     <item>
       <title>Embedded Rust is fun!</title>
@@ -29,6 +20,15 @@
       <description>My embedded experiments This is yet another test of what I would like to show here. I want to talk about tinkering with embedded devices in Rust. Why embedded, and why Rust? Because:
  it&amp;rsquo;s cool I like it I&amp;rsquo;m learning new things!  So in embedded Rust, you start with something like this:
 #[no_main] #[no_std] use panic_halt as _; And after you add some more code to initialize various element of the microcontroller and such, you can see something like this:</description>
+    </item>
+    
+    <item>
+      <title>Second post</title>
+      <link>https://nebelgrau77.github.io/posts/second_post/</link>
+      <pubDate>Fri, 01 Jan 2021 20:58:35 +0100</pubDate>
+      
+      <guid>https://nebelgrau77.github.io/posts/second_post/</guid>
+      <description>This will be another post: just trying to find out how Hugo works!</description>
     </item>
     
   </channel>
