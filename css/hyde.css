@@ -265,8 +265,8 @@ ul {
 .theme-base-11 .sidebar {
   background-color: #360009;
 }
-.theme-base-10 .content a,
-.theme-base-10 .related-posts li a:hover {
+.theme-base-11 .content a,
+.theme-base-11 .related-posts li a:hover {
   color: #051728;
 }
 
@@ -274,7 +274,7 @@ ul {
 .theme-base-12 .sidebar {
   background-color: #100e1a;
 }
-.theme-base-10 .content a,
-.theme-base-10 .related-posts li a:hover {
+.theme-base-12 .content a,
+.theme-base-12 .related-posts li a:hover {
   color: #051728;
 }
