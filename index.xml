@@ -22,15 +22,6 @@
     </item>
     
     <item>
-      <title>Home</title>
-      <link>https://nebelgrau77.github.io/home/home/</link>
-      <pubDate>Sat, 20 Feb 2021 15:51:47 +0100</pubDate>
-      
-      <guid>https://nebelgrau77.github.io/home/home/</guid>
-      <description>This is the main page </description>
-    </item>
-    
-    <item>
       <title>Embedded Rust is fun!</title>
       <link>https://nebelgrau77.github.io/posts/embedded_rust/</link>
       <pubDate>Wed, 17 Feb 2021 13:12:05 +0100</pubDate>
