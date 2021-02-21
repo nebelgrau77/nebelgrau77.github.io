@@ -1,0 +1,21 @@
+---
+title: "About me"
+date: 2021-02-16T21:58:01+01:00
+type: static
+#draft: true
+---
+(the one in main)
+
+I'm Michał, a.k.a. Nebelgrau. Self-described as an "aspiring data witcher, wannabe embedded Rustacean, Pythonista and TinyML afficionado" :) 
+
+Let me unpack all that!
+
+Somewhere towards the end of 2017 I decided to learn something about data science, so I found out about Python and started with that. I was curious about electronics, and thought this would help me learn programming in general, so I also started tinkering with MicroPython on Espressif and STM32 devices. Then I decided to try C, and discovered Rust.
+
+It seemed scattered all over the place for a while, but some pattern emerged at some point, so to speak. Learning about data, machine learning, neural networks and microcontrollers led to my interest in TinyML, that is machine learning on small, low power devices.
+
+All of the above are constant learning / hobby projects, which would hopefully lead to a career transition at some point.
+
+Oh, and I put this website together to share some findings and ideas with others!
+
+

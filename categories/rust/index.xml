@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>nebelgrau</title>
-    <link>https://nebelgrau77.github.io/</link>
-    <description>Recent content on nebelgrau</description>
+    <title>rust on nebelgrau</title>
+    <link>https://nebelgrau77.github.io/categories/rust/</link>
+    <description>Recent content in rust on nebelgrau</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 20 Feb 2021 20:56:21 +0100</lastBuildDate>
     
-	<atom:link href="https://nebelgrau77.github.io/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://nebelgrau77.github.io/categories/rust/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -22,15 +22,6 @@
     </item>
     
     <item>
-      <title>Home</title>
-      <link>https://nebelgrau77.github.io/home/home/</link>
-      <pubDate>Sat, 20 Feb 2021 15:51:47 +0100</pubDate>
-      
-      <guid>https://nebelgrau77.github.io/home/home/</guid>
-      <description>This is the main page </description>
-    </item>
-    
-    <item>
       <title>Embedded Rust is fun!</title>
       <link>https://nebelgrau77.github.io/posts/embedded_rust/</link>
       <pubDate>Wed, 17 Feb 2021 13:12:05 +0100</pubDate>
@@ -39,18 +30,6 @@
       <description>My embedded experiments This is yet another test of what I would like to show here. I want to talk about tinkering with embedded devices in Rust. Why embedded, and why Rust? Because:
  it&amp;rsquo;s cool I like it I&amp;rsquo;m learning new things!  So in embedded Rust, you start with something like this:
 #[no_main] #[no_std] use panic_halt as _; fn main() -&amp;gt; ! { let mut x: u8 = 42; println!</description>
-    </item>
-    
-    <item>
-      <title>About me</title>
-      <link>https://nebelgrau77.github.io/about/about/</link>
-      <pubDate>Tue, 16 Feb 2021 21:58:01 +0100</pubDate>
-      
-      <guid>https://nebelgrau77.github.io/about/about/</guid>
-      <description>I&amp;rsquo;m Michał, a.k.a. Nebelgrau. Self-described as an &amp;ldquo;aspiring data witcher, wannabe embedded Rustacean, Pythonista and TinyML afficionado&amp;rdquo; :)
-Let me unpack all that!
-Somewhere towards the end of 2017 I decided to learn something about data science, so I found out about Python.
-I was curious about electronics, too, and thought this would help me learn programming in general, so I also started tinkering with MicroPython on Espressif and STM32 devices.</description>
     </item>
     
     <item>

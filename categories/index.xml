@@ -1,14 +1,60 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Categories on NBG77</title>
+    <title>Categories on nebelgrau</title>
     <link>https://nebelgrau77.github.io/categories/</link>
-    <description>Recent content in Categories on NBG77</description>
+    <description>Recent content in Categories on nebelgrau</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <lastBuildDate>Sat, 20 Feb 2021 20:56:21 +0100</lastBuildDate>
     
 	<atom:link href="https://nebelgrau77.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>arduino</title>
+      <link>https://nebelgrau77.github.io/categories/arduino/</link>
+      <pubDate>Sat, 20 Feb 2021 20:56:21 +0100</pubDate>
+      
+      <guid>https://nebelgrau77.github.io/categories/arduino/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>embedded</title>
+      <link>https://nebelgrau77.github.io/categories/embedded/</link>
+      <pubDate>Sat, 20 Feb 2021 20:56:21 +0100</pubDate>
+      
+      <guid>https://nebelgrau77.github.io/categories/embedded/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>rust</title>
+      <link>https://nebelgrau77.github.io/categories/rust/</link>
+      <pubDate>Sat, 20 Feb 2021 20:56:21 +0100</pubDate>
+      
+      <guid>https://nebelgrau77.github.io/categories/rust/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>programming</title>
+      <link>https://nebelgrau77.github.io/categories/programming/</link>
+      <pubDate>Sun, 07 Feb 2021 00:00:01 +0100</pubDate>
+      
+      <guid>https://nebelgrau77.github.io/categories/programming/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>python</title>
+      <link>https://nebelgrau77.github.io/categories/python/</link>
+      <pubDate>Sun, 07 Feb 2021 00:00:01 +0100</pubDate>
+      
+      <guid>https://nebelgrau77.github.io/categories/python/</guid>
+      <description></description>
+    </item>
     
   </channel>
 </rss>
