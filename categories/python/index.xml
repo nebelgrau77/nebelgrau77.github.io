@@ -17,11 +17,7 @@
       <pubDate>Sun, 14 Feb 2021 00:00:01 +0100</pubDate>
       
       <guid>https://nebelgrau77.github.io/posts/helloworld/</guid>
-      <description>The tradition must continue, therefore the first post shall be the &amp;ldquo;Hello, world!&amp;rdquo;
-This is not really the first post, though: I backdated it by a few days to make it so.
-It is still a work in progress project, so it doesn&amp;rsquo;t really matter that much, I suppose.
-And here&amp;rsquo;s the code, in two different versions:
-Python print(&amp;#34;Hello, world!&amp;#34;) Rust fn main () { println!(&amp;#34;Hello, world!&amp;#34;); } Nice code&amp;hellip; formatting!</description>
+      <description>&lt;p&gt;The tradition must continue, therefore the first post shall be the &amp;ldquo;Hello, world!&amp;rdquo;&lt;/p&gt;</description>
     </item>
     
   </channel>

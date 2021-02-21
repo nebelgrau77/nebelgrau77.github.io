@@ -6,20 +6,10 @@
     <description>Recent content in Posts on nebelgrau</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 20 Feb 2021 20:56:21 +0100</lastBuildDate>
+    <lastBuildDate>Wed, 17 Feb 2021 13:12:05 +0100</lastBuildDate>
     
 	<atom:link href="https://nebelgrau77.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Oxidizing the BLE Sense board</title>
-      <link>https://nebelgrau77.github.io/posts/oxidizing_blesense/</link>
-      <pubDate>Sat, 20 Feb 2021 20:56:21 +0100</pubDate>
-      
-      <guid>https://nebelgrau77.github.io/posts/oxidizing_blesense/</guid>
-      <description>How to run Rust on Arduino Nano 33 BLE Sense? - DRAFT things I want to write about:
- Arduino 33 BLE Sense - what&amp;rsquo;s it good for, why did I get one? Why would I want to use Rust with it, what&amp;rsquo;s wrong with Arduino code? How to make a bootloader? How to get Arduino connected to J-Link/BMP?  Here&amp;rsquo;s my BLESense after attaching the SWD wires, happily blinking the blue LED.</description>
-    </item>
     
     <item>
       <title>Embedded Rust is fun!</title>
@@ -27,9 +17,7 @@
       <pubDate>Wed, 17 Feb 2021 13:12:05 +0100</pubDate>
       
       <guid>https://nebelgrau77.github.io/posts/embedded_rust/</guid>
-      <description>My embedded experiments This is yet another test of what I would like to show here. I want to talk about tinkering with embedded devices in Rust. Why embedded, and why Rust? Because:
- it&amp;rsquo;s cool I like it I&amp;rsquo;m learning new things!  So in embedded Rust, you start with something like this:
-#[no_main] #[no_std] use panic_halt as _; fn main() -&amp;gt; ! { let mut x: u8 = 42; println!</description>
+      <description>&lt;p&gt;This is just a test of what I would like to show here. For example tinkering with embedded devices in Rust.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -38,11 +26,7 @@
       <pubDate>Sun, 14 Feb 2021 00:00:01 +0100</pubDate>
       
       <guid>https://nebelgrau77.github.io/posts/helloworld/</guid>
-      <description>The tradition must continue, therefore the first post shall be the &amp;ldquo;Hello, world!&amp;rdquo;
-This is not really the first post, though: I backdated it by a few days to make it so.
-It is still a work in progress project, so it doesn&amp;rsquo;t really matter that much, I suppose.
-And here&amp;rsquo;s the code, in two different versions:
-Python print(&amp;#34;Hello, world!&amp;#34;) Rust fn main () { println!(&amp;#34;Hello, world!&amp;#34;); } Nice code&amp;hellip; formatting!</description>
+      <description>&lt;p&gt;The tradition must continue, therefore the first post shall be the &amp;ldquo;Hello, world!&amp;rdquo;&lt;/p&gt;</description>
     </item>
     
   </channel>

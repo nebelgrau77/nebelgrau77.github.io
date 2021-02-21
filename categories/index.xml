@@ -6,24 +6,15 @@
     <description>Recent content in Categories on nebelgrau</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 20 Feb 2021 20:56:21 +0100</lastBuildDate>
+    <lastBuildDate>Wed, 17 Feb 2021 13:12:05 +0100</lastBuildDate>
     
 	<atom:link href="https://nebelgrau77.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>arduino</title>
-      <link>https://nebelgrau77.github.io/categories/arduino/</link>
-      <pubDate>Sat, 20 Feb 2021 20:56:21 +0100</pubDate>
-      
-      <guid>https://nebelgrau77.github.io/categories/arduino/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>embedded</title>
       <link>https://nebelgrau77.github.io/categories/embedded/</link>
-      <pubDate>Sat, 20 Feb 2021 20:56:21 +0100</pubDate>
+      <pubDate>Wed, 17 Feb 2021 13:12:05 +0100</pubDate>
       
       <guid>https://nebelgrau77.github.io/categories/embedded/</guid>
       <description></description>
@@ -32,7 +23,7 @@
     <item>
       <title>rust</title>
       <link>https://nebelgrau77.github.io/categories/rust/</link>
-      <pubDate>Sat, 20 Feb 2021 20:56:21 +0100</pubDate>
+      <pubDate>Wed, 17 Feb 2021 13:12:05 +0100</pubDate>
       
       <guid>https://nebelgrau77.github.io/categories/rust/</guid>
       <description></description>

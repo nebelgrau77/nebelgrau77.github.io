@@ -3,42 +3,32 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://nebelgrau77.github.io/categories/arduino/</loc>
-    <lastmod>2021-02-20T20:56:21+01:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://nebelgrau77.github.io/categories/</loc>
-    <lastmod>2021-02-20T20:56:21+01:00</lastmod>
+    <lastmod>2021-02-17T13:12:05+01:00</lastmod>
   </url>
   
   <url>
     <loc>https://nebelgrau77.github.io/categories/embedded/</loc>
-    <lastmod>2021-02-20T20:56:21+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://nebelgrau77.github.io/</loc>
-    <lastmod>2021-02-20T20:56:21+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://nebelgrau77.github.io/posts/oxidizing_blesense/</loc>
-    <lastmod>2021-02-20T20:56:21+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://nebelgrau77.github.io/posts/</loc>
-    <lastmod>2021-02-20T20:56:21+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://nebelgrau77.github.io/categories/rust/</loc>
-    <lastmod>2021-02-20T20:56:21+01:00</lastmod>
+    <lastmod>2021-02-17T13:12:05+01:00</lastmod>
   </url>
   
   <url>
     <loc>https://nebelgrau77.github.io/posts/embedded_rust/</loc>
+    <lastmod>2021-02-17T13:12:05+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://nebelgrau77.github.io/</loc>
+    <lastmod>2021-02-17T13:12:05+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://nebelgrau77.github.io/posts/</loc>
+    <lastmod>2021-02-17T13:12:05+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://nebelgrau77.github.io/categories/rust/</loc>
     <lastmod>2021-02-17T13:12:05+01:00</lastmod>
   </url>
   
