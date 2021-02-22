@@ -6,7 +6,7 @@
     <description>Recent content in Categories on nebelgrau</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 17 Feb 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 22 Feb 2021 21:26:10 +0100</lastBuildDate>
     
 	<atom:link href="https://nebelgrau77.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,7 +14,7 @@
     <item>
       <title>embedded</title>
       <link>https://nebelgrau77.github.io/categories/embedded/</link>
-      <pubDate>Wed, 17 Feb 2021 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 22 Feb 2021 21:26:10 +0100</pubDate>
       
       <guid>https://nebelgrau77.github.io/categories/embedded/</guid>
       <description></description>
@@ -23,18 +23,27 @@
     <item>
       <title>rust</title>
       <link>https://nebelgrau77.github.io/categories/rust/</link>
-      <pubDate>Wed, 17 Feb 2021 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 22 Feb 2021 21:26:10 +0100</pubDate>
       
       <guid>https://nebelgrau77.github.io/categories/rust/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>programming</title>
-      <link>https://nebelgrau77.github.io/categories/programming/</link>
+      <title>blog</title>
+      <link>https://nebelgrau77.github.io/categories/blog/</link>
+      <pubDate>Mon, 22 Feb 2021 21:20:00 +0100</pubDate>
+      
+      <guid>https://nebelgrau77.github.io/categories/blog/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>coding</title>
+      <link>https://nebelgrau77.github.io/categories/coding/</link>
       <pubDate>Sun, 14 Feb 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://nebelgrau77.github.io/categories/programming/</guid>
+      <guid>https://nebelgrau77.github.io/categories/coding/</guid>
       <description></description>
     </item>
     

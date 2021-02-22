@@ -6,7 +6,7 @@
     <description>Recent content in embedded on nebelgrau</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 17 Feb 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 22 Feb 2021 21:26:10 +0100</lastBuildDate>
     
 	<atom:link href="https://nebelgrau77.github.io/categories/embedded/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,10 +14,10 @@
     <item>
       <title>Embedded Rust is fun!</title>
       <link>https://nebelgrau77.github.io/posts/embedded_rust/</link>
-      <pubDate>Wed, 17 Feb 2021 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 22 Feb 2021 21:26:10 +0100</pubDate>
       
       <guid>https://nebelgrau77.github.io/posts/embedded_rust/</guid>
-      <description>&lt;p&gt;This is just a test of what I would like to show here. For example tinkering with embedded devices in Rust.&lt;/p&gt;</description>
+      <description>&lt;p&gt;A test of what I want to write about here: for example tinkering with microcontrollers in Rust.&lt;/p&gt;</description>
     </item>
     
   </channel>

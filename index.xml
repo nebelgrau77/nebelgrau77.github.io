@@ -6,7 +6,7 @@
     <description>Recent content on nebelgrau</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 17 Feb 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 22 Feb 2021 21:26:10 +0100</lastBuildDate>
     
 	<atom:link href="https://nebelgrau77.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,19 +14,28 @@
     <item>
       <title>Embedded Rust is fun!</title>
       <link>https://nebelgrau77.github.io/posts/embedded_rust/</link>
-      <pubDate>Wed, 17 Feb 2021 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 22 Feb 2021 21:26:10 +0100</pubDate>
       
       <guid>https://nebelgrau77.github.io/posts/embedded_rust/</guid>
-      <description>&lt;p&gt;This is just a test of what I would like to show here. For example tinkering with embedded devices in Rust.&lt;/p&gt;</description>
+      <description>&lt;p&gt;A test of what I want to write about here: for example tinkering with microcontrollers in Rust.&lt;/p&gt;</description>
     </item>
     
     <item>
-      <title>Hello world!</title>
+      <title>About this blog</title>
+      <link>https://nebelgrau77.github.io/posts/about-this-blog/</link>
+      <pubDate>Mon, 22 Feb 2021 21:20:00 +0100</pubDate>
+      
+      <guid>https://nebelgrau77.github.io/posts/about-this-blog/</guid>
+      <description>&lt;p&gt;The how and why of this simple blog, in my own words!&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Hello, world!</title>
       <link>https://nebelgrau77.github.io/posts/helloworld/</link>
       <pubDate>Sun, 14 Feb 2021 00:00:00 +0000</pubDate>
       
       <guid>https://nebelgrau77.github.io/posts/helloworld/</guid>
-      <description>&lt;p&gt;The tradition must continue, therefore the first post shall be the &amp;ldquo;Hello, world!&amp;rdquo;&lt;/p&gt;</description>
+      <description>&lt;p&gt;The ancient computer tradition requires the first post to be the &amp;ldquo;Hello, world!&amp;rdquo;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -35,8 +44,7 @@
       <pubDate>Sun, 07 Feb 2021 00:00:00 +0000</pubDate>
       
       <guid>https://nebelgrau77.github.io/about/about/</guid>
-      <description>&lt;p&gt;I&amp;rsquo;m Michał, a.k.a. Nebelgrau.&lt;br&gt;
-Self-described &amp;ldquo;aspiring data witcher, wannabe Rustacean, Pythonista and TinyML afficionado&amp;rdquo;.&lt;/p&gt;</description>
+      <description>&lt;p&gt;My name&amp;rsquo;s Michał, and I&amp;rsquo;m a self-described aspiring data witcher, wannabe Rustacean, Pythonista and TinyML afficionado.&lt;/p&gt;</description>
     </item>
     
   </channel>
