@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>coding on nebelgrau</title>
+    <link>https://nebelgrau77.github.io/categories/coding/</link>
+    <description>Recent content in coding on nebelgrau</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 14 Feb 2021 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://nebelgrau77.github.io/categories/coding/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Hello, world!</title>
+      <link>https://nebelgrau77.github.io/posts/helloworld/</link>
+      <pubDate>Sun, 14 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://nebelgrau77.github.io/posts/helloworld/</guid>
+      <description>&lt;p&gt;The ancient computer tradition requires the first post to be the &amp;ldquo;Hello, world!&amp;rdquo;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
