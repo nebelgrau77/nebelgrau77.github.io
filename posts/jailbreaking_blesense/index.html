@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head>
+  <link href="https://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Hugo 0.68.3" />
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Adventures in tinkering, or how I jailbroke my BLESense &middot; nebelgrau</title>
+  <meta name="description" content="" />
+
+  
+  <link type="text/css" rel="stylesheet" href="https://nebelgrau77.github.io/css/print.css" media="print">
+  <link type="text/css" rel="stylesheet" href="https://nebelgrau77.github.io/css/poole.css">
+  <link type="text/css" rel="stylesheet" href="https://nebelgrau77.github.io/css/syntax.css">
+  <link type="text/css" rel="stylesheet" href="https://nebelgrau77.github.io/css/hyde.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anton|PT+Sans:400,400i,700">
+
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/img/main/favicon.png">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+  
+  
+</head>
+
+  <body class="theme-base-13 ">
+  <aside class="sidebar">
+  
+  <div class="container sidebar-sticky">
+
+    
+  <div class="author-image">
+    <a href="https://nebelgrau77.github.io/"><img src="/img/main/glitch.png" alt="NEBELGRAU logo" class="author-image"></a>
+  </div>
+
+
+    <nav>
+      <ul class="sidebar-nav">
+        <li><a href="/about/about">ABOUT</a> </li>
+        <li><a href="/posts"> BLOG </a></li>
+      </ul>
+    </nav>
+
+    <p><a href="https://twitter.com/nebelgrau77"><i class="fa fa-twitter"></i></a>&nbsp;&nbsp; 
+      <a href="https://github.com/nebelgrau77"><i class="fa fa-github"></i></a>&nbsp;&nbsp;
+      <a href="mailto:nebelgrau77@gmail.com"><i class="fa fa-envelope"></i></a>&nbsp;&nbsp;
+       </p>
+
+
+    <p>&copy; nebelgrau 2021</p>
+  </div>
+</aside>
+
+    <main class="content container">
+    <div class="post">
+  <h2>Adventures in tinkering, or how I jailbroke my BLESense</h2>
+
+  <p>Last updated: 2021-03-13</p>
+  
+  <p>Would you like to program your Arduino 33 BLE Sense with something other than Arduino?</p>
+<h3 id="what-is-the-ble-sense">What is the BLE Sense?</h3>
+<p>The <a href="https://store.arduino.cc/arduino-nano-33-ble-sense">BLE Sense</a> is without a doubt a great little board. It has a fast yet power-efficient Cortex-M4 class microcontroller, lots of memory, Bluetooth Low Energy connectivity, and a whole bunch of sensors:</p>
+<ul>
+<li>temperature, humidity and pressure</li>
+<li>light, color and gestures</li>
+<li>9-axis IMU (accelerometer, gyroscope and magnetometer)</li>
+<li>a microphone</li>
+</ul>
+<p>It is pretty much <em>the</em> board when it comes to machine learning on embedded devices: it&rsquo;s featured in the <a href="https://www.oreilly.com/library/view/tinyml/9781492052036/">TinyML book</a>, the <a href="https://www.edx.org/professional-certificate/harvardx-tiny-machine-learning">TinyML course by HarvardX</a> and the <a href="https://www.coursera.org/learn/introduction-to-embedded-machine-learning">Embedded Machine Learning course by Coursera</a>. It&rsquo;s also officially supported by <a href="https://docs.edgeimpulse.com/docs/arduino-nano-33-ble-sense">EdgeImpulse</a>, which will allow you to start experimenting with TinyML right away!</p>
+<p>In general Arduino (as in programming language, the C/C++ dialect) is pretty great, especially if you want to focus on the project itself and not the bare metal details. Sometimes it&rsquo;s a little opaque, though, and abstracts a whole bunch of things away from the user.</p>
+<h3 id="so-what-if-you-want-to-go-beyond-the-arduino">So what if you want to go beyond the Arduino?</h3>
+<p>In my case, I wanted to try programming it with Rust*. I already had some experience with the nRF52840 on the <a href="https://learn.adafruit.com/adafruit-itsybitsy-nrf52840-express">Adafruit&rsquo;s ItsyBitsy board</a> with the same MCU, but then the BLESense has all those nice sensors, too!</p>
+<p>* <em>you could also use C/C++ with or without Nordic SDK, or (something I haven&rsquo;t tried myself) TinyGo or CircuitPython</em></p>
+<p>The problem is, BLE Sense has its own specific bootloader. It works well with Arduino IDE, but that&rsquo;s pretty much it. In order to do anything else you need to replace it with some other bootloader, that will allow you to flash the board with the firmware of your choice, e.g. written in Rust. Adafruit to the rescue!</p>
+<h3 id="making-the-bootloader">Making the bootloader</h3>
+<p>What you need to do is to clone the repository with Adafruit nRF52 Bootloader, and then build it for the Nano 33 BLE board like so:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git clone https://github.com/adafruit/Adafruit_nRF52_Bootloader.git
+cd Adafruit_nRF52_Bootloader
+git submodule update --init
+make BOARD<span style="color:#f92672">=</span>arduino_nano_33_ble all
+</code></pre></div><p>This will take a moment, and after it&rsquo;s done, you&rsquo;ll see that there&rsquo;s now a folder <code>_build/build-arduino_nano_33_ble</code> with multiple files. The one you need is this one:<br>
+<code>arduino_nano_33_ble_bootloader-0.4.1_s140_6.1.1.hex</code>: it also contains the Nordic SoftDevice S140 v.6.1.1.</p>
+<p>But how can we flash the board with it?</p>
+<h3 id="exposing-the-swd-interface">Exposing the SWD interface</h3>
+<p>Here&rsquo;s where you need to do a little modification to the board itself. It&rsquo;s not very difficult, but requires some basic soldering skills, and some patience.<br>
+Arduino designers didn&rsquo;t include any pins for the Serial Wire Debug (SWD) interface, but luckily left the soldering pads exposed at the bottom of the board:</p>
+<p><img src="/img/posts/jailbreaking-ble/swd.png" alt="SWD soldering pads"></p>
+<p>You can also see it on the <a href="https://content.arduino.cc/assets/Pinout-NANOsense_latest.pdf">pinout</a>.</p>
+<p>In hindsight I can tell that only the two pins (SWDIO and SWDCLK) seem necessary for this operation, I didn&rsquo;t connect the RESET pin. It also makes a lot of sense to somehow secure the attached wires to the board, as they may easily detach otherwise.</p>
+<h3 id="flashing-the-bootloader">Flashing the bootloader</h3>
+<p>Once we have the SWD interface available, all we need is to put this <code>.hex</code> file on the board. It can be done with Segger J-Link, but I didn&rsquo;t have one at hand, so I used the <a href="https://github.com/blacksphere/blackmagic/wiki">Black Magic Probe</a> instead. To be specific, I used the cheap &ldquo;<em>blue pill</em>&rdquo; STM32F103 board with the BMP firmware flashed, as explained <a href="https://paramaggarwal.medium.com/converting-an-stm32f103-board-to-a-black-magic-probe-c013cf2cc38c">here</a> and <a href="https://buger.dread.cz/black-magic-probe-bmp-on-bluepill-stm32f103c8-minimum-system-development-board.html">here</a>. It&rsquo;s limited compared to the original, as it only has SWD interface and no JTAG, but will do just fine here.</p>
+<p>All you need to do is to connect the new SWDIO and SWCLK of the BLE Sense board to their relative BMP counterparts, and also connect +3V3 and GND from the BMP to the right pins of the BLE Sense (check <a href="https://content.arduino.cc/assets/Pinout-NANOsense_latest.pdf">pinout</a> for the correct pins). After that you run GDB on your computer, and run the following commands:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">gdb
+target extended-remote /dev/ttyACM0
+monitor swdp_scan
+attach <span style="color:#ae81ff">1</span> <span style="color:#f92672">(</span>Nordic nRF52 M4<span style="color:#f92672">)</span> 
+load arduino_nano_33_ble_bootloader-0.4.0-2-g4ba802d_s140_6.1.1.hex
+kill
+</code></pre></div><p>It does the following:</p>
+<ul>
+<li>connects to the BMP on port ttyACM0 (or whatever your serial port may be)</li>
+<li>scans for available SWD targets</li>
+<li>attached to target 1, which is the Nordic nRF52 M4</li>
+<li>loads the firmware to the board</li>
+<li>resets everything</li>
+</ul>
+<p>Now after you disconnect the BMP and attach the BLE Sense to the computer, you&rsquo;ll see that it shows up as <em>NANO33BOOT</em> flash drive. To test whether everything went smoothly, you can flash it with this <a href="other/blinky.zip">simple blink example</a> I made with Rust (GitHub repository <a href="https://github.com/nebelgrau77/nano33blesense_blink_rs">here</a>).<br>
+All you need to do is to install <a href="https://github.com/adafruit/Adafruit_nRF52_nrfutil">Adafruit&rsquo;s version of nRFutil</a>, put the board into the bootloader mode (you&rsquo;ll see a drive named <em>NANO33BOOT</em> appear) and then execute the following instruction in the folder where you stored the <code>blinky.zip</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">adafruit-nrfutil dfu serial --package blinky.zip -p /dev/ttyACM0 -b <span style="color:#ae81ff">115200</span>
+</code></pre></div><p><img src="/img/posts/oxidizing-ble/BLESense_Rust_blink.gif" alt="blinkenlight">And here&rsquo;s a BLESense (with SWD wires still attached) happily blinking the blue LED with the Rust code. I really wish I had secured the wires better, they had detached shortly after flashing the bootloader, which is a bummer as I can&rsquo;t use BMP or J-Link to debug the board (but the flashing over bootloader works great).</p>
+<p>This is it for now, to be continued! I will explain more about the Rust code, and how to get the sensors to work. Stay tuned!</p>
+  
+<br>
+
+  
+  &nbsp;<p class = "fa fa-folder-open"></p> Categories: &nbsp;
+  
+    <a href="https://nebelgrau77.github.io/categories/rust/">rust</a
+    >&nbsp;
+  
+    <a href="https://nebelgrau77.github.io/categories/embedded/">embedded</a
+    >&nbsp;
+  
+    <a href="https://nebelgrau77.github.io/categories/arduino/">arduino</a
+    >&nbsp;
+  
+    <a href="https://nebelgrau77.github.io/categories/tinyml/">tinyml</a
+    >&nbsp;
+  
+  
+
+</div>
+
+
+
+<h4>Comments</h4>
+<div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "nebelgrau77" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </main>
+
+    
+      
+    
+  </body>
+</html>

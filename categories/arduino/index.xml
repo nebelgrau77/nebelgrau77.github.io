@@ -6,19 +6,18 @@
     <description>Recent content in arduino on nebelgrau</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 20 Feb 2021 20:56:21 +0100</lastBuildDate>
+    <lastBuildDate>Sat, 13 Mar 2021 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://nebelgrau77.github.io/categories/arduino/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Oxidizing the BLE Sense board</title>
-      <link>https://nebelgrau77.github.io/posts/oxidizing_blesense/</link>
-      <pubDate>Sat, 20 Feb 2021 20:56:21 +0100</pubDate>
+      <title>Adventures in tinkering, or how I jailbroke my BLESense</title>
+      <link>https://nebelgrau77.github.io/posts/jailbreaking_blesense/</link>
+      <pubDate>Sat, 13 Mar 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://nebelgrau77.github.io/posts/oxidizing_blesense/</guid>
-      <description>How to run Rust on Arduino Nano 33 BLE Sense? - DRAFT things I want to write about:
- Arduino 33 BLE Sense - what&amp;rsquo;s it good for, why did I get one? Why would I want to use Rust with it, what&amp;rsquo;s wrong with Arduino code? How to make a bootloader? How to get Arduino connected to J-Link/BMP?  Here&amp;rsquo;s my BLESense after attaching the SWD wires, happily blinking the blue LED.</description>
+      <guid>https://nebelgrau77.github.io/posts/jailbreaking_blesense/</guid>
+      <description>&lt;p&gt;Would you like to program your Arduino 33 BLE Sense with something other than Arduino?&lt;/p&gt;</description>
     </item>
     
   </channel>
