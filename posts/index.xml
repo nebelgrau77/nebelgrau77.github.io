@@ -21,21 +21,12 @@
     </item>
     
     <item>
-      <title>Embedded Rust is fun!</title>
-      <link>https://nebelgrau77.github.io/posts/embedded_rust/</link>
-      <pubDate>Mon, 22 Feb 2021 21:26:10 +0100</pubDate>
-      
-      <guid>https://nebelgrau77.github.io/posts/embedded_rust/</guid>
-      <description>&lt;p&gt;A test of what I want to write about here: for example tinkering with microcontrollers in Rust.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
       <title>About this blog</title>
       <link>https://nebelgrau77.github.io/posts/about-this-blog/</link>
       <pubDate>Mon, 22 Feb 2021 21:20:00 +0100</pubDate>
       
       <guid>https://nebelgrau77.github.io/posts/about-this-blog/</guid>
-      <description>&lt;p&gt;The how and why of this simple blog, in my own words!&lt;/p&gt;</description>
+      <description>&lt;p&gt;The how and why of this simple blog, in my own words :)&lt;/p&gt;</description>
     </item>
     
     <item>
