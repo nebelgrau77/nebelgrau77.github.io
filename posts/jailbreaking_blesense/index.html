@@ -114,7 +114,8 @@ kill
 All you need to do is to install <a href="https://github.com/adafruit/Adafruit_nRF52_nrfutil">Adafruit&rsquo;s version of nRFutil</a>, put the board into the bootloader mode (you&rsquo;ll see a drive named <em>NANO33BOOT</em> appear) and then execute the following instruction in the folder where you stored the <code>blinky.zip</code>:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">adafruit-nrfutil dfu serial --package blinky.zip -p /dev/ttyACM0 -b <span style="color:#ae81ff">115200</span>
 </code></pre></div><p><img src="/img/posts/oxidizing-ble/BLESense_Rust_blink.gif" alt="blinkenlight">And here&rsquo;s a BLESense (with SWD wires still attached) happily blinking the blue LED with the Rust code. I really wish I had secured the wires better, they had detached shortly after flashing the bootloader, which is a bummer as I can&rsquo;t use BMP or J-Link to debug the board (but the flashing over bootloader works great).</p>
-<p>This is it for now, to be continued! I will explain more about the Rust code, and how to get the sensors to work. Stay tuned!</p>
+<p>This is it for now, to be continued! I will explain more about the Rust code, and how to get the sensors to work.</p>
+<p>Stay tuned!</p>
   
 <br>
 
