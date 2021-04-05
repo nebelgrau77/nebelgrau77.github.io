@@ -30,24 +30,6 @@
     </item>
     
     <item>
-      <title>Jailbreaking the BLESense - pt.2 - sensors</title>
-      <link>https://nebelgrau77.github.io/posts/jailbreaking_blesense_sensors/</link>
-      <pubDate>Sun, 28 Feb 2021 12:10:24 +0100</pubDate>
-      
-      <guid>https://nebelgrau77.github.io/posts/jailbreaking_blesense_sensors/</guid>
-      <description>&lt;p&gt;This is the second part of the post about jailbreaking the BLESense board.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Embedded Rust is fun!</title>
-      <link>https://nebelgrau77.github.io/posts/embedded_rust/</link>
-      <pubDate>Mon, 22 Feb 2021 21:26:10 +0100</pubDate>
-      
-      <guid>https://nebelgrau77.github.io/posts/embedded_rust/</guid>
-      <description>&lt;p&gt;A test of what I want to write about here: for example tinkering with microcontrollers in Rust.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
       <title>Hello, world!</title>
       <link>https://nebelgrau77.github.io/posts/helloworld/</link>
       <pubDate>Sun, 14 Feb 2021 00:00:00 +0000</pubDate>

@@ -80,10 +80,10 @@
 <p>The problem is, BLE Sense has its own specific bootloader. It works well with Arduino IDE, but that&rsquo;s pretty much it. In order to do anything else you need to replace it with some other bootloader that will allow you to flash the board with the firmware of your choice, e.g. written in Rust. Adafruit to the rescue!</p>
 <h3 id="making-the-bootloader">Making the bootloader</h3>
 <p>What you need to do is clone the repository with Adafruit nRF52 Bootloader, and then build it for the Nano 33 BLE board like so:</p>
-<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git clone https://github.com/adafruit/Adafruit_nRF52_Bootloader.git
-<span style="color:#007020">cd</span> Adafruit_nRF52_Bootloader
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">git clone https://github.com/adafruit/Adafruit_nRF52_Bootloader.git
+<span class="nb">cd</span> Adafruit_nRF52_Bootloader
 git submodule update --init
-make <span style="color:#bb60d5">BOARD</span><span style="color:#666">=</span>arduino_nano_33_ble all
+make <span class="nv">BOARD</span><span class="o">=</span>arduino_nano_33_ble all
 </code></pre></div><p>This will take a moment, and after it&rsquo;s done, you&rsquo;ll see that there&rsquo;s now a folder <code>_build/build-arduino_nano_33_ble</code> with multiple files. The one you need is this one:<br>
 <code>arduino_nano_33_ble_bootloader-0.4.1_s140_6.1.1.hex</code> (it also contains the Nordic SoftDevice S140 v.6.1.1).</p>
 <p>But how can we flash the board with it?</p>
@@ -96,12 +96,12 @@ Arduino designers didn&rsquo;t include any pins for the Serial Wire Debug (SWD) 
 <h3 id="flashing-the-bootloader">Flashing the bootloader</h3>
 <p>Once we have the SWD interface available, all we need is to put this <code>.hex</code> file on the board. It can be done with Segger J-Link, but I didn&rsquo;t have one handy, so I used the <a href="https://github.com/blacksphere/blackmagic/wiki">Black Magic Probe</a> instead. To be specific, I used the cheap &ldquo;<em>blue pill</em>&rdquo; STM32F103 board with the BMP firmware flashed, as explained <a href="https://paramaggarwal.medium.com/converting-an-stm32f103-board-to-a-black-magic-probe-c013cf2cc38c">here</a> and <a href="https://buger.dread.cz/black-magic-probe-bmp-on-bluepill-stm32f103c8-minimum-system-development-board.html">here</a>. It&rsquo;s limited compared to the original, as it only has SWD interface and no JTAG, but will do just fine here.</p>
 <p>All you need to do is connect the new SWDIO and SWCLK of the BLE Sense board to their relative BMP counterparts, and also connect +3V3 and GND from the BMP to the right pins of the BLE Sense (check <a href="https://content.arduino.cc/assets/Pinout-NANOsense_latest.pdf">pinout</a> for the correct pins). After that you run GDB on your computer, and run the following commands:</p>
-<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">gdb
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">gdb
 target extended-remote /dev/ttyACM0
 monitor swdp_scan
-attach <span style="color:#40a070">1</span> <span style="color:#666">(</span>Nordic nRF52 M4<span style="color:#666">)</span> 
+attach <span class="m">1</span> <span class="o">(</span>Nordic nRF52 M4<span class="o">)</span> 
 load arduino_nano_33_ble_bootloader-0.4.0-2-g4ba802d_s140_6.1.1.hex
-<span style="color:#007020">kill</span>
+<span class="nb">kill</span>
 </code></pre></div><p>It does the following:</p>
 <ul>
 <li>connects to the BMP on port ttyACM0 (or whatever your serial port may be)</li>
@@ -113,7 +113,7 @@ load arduino_nano_33_ble_bootloader-0.4.0-2-g4ba802d_s140_6.1.1.hex
 <h3 id="let-there-be-blinkenlight">Let there be blinkenlight!</h3>
 <p>Now after you disconnect the BMP and attach the BLE Sense to the computer, you&rsquo;ll see that it shows up as <em>NANO33BOOT</em> flash drive. To test whether everything went smoothly, you can flash it with this <a href="/other/blinky.zip">simple blink example</a> I made with Rust (GitHub repository <a href="https://github.com/nebelgrau77/nano33blesense_blink_rs">here</a>).<br>
 All you need to do is install <a href="https://github.com/adafruit/Adafruit_nRF52_nrfutil">Adafruit&rsquo;s version of nRFutil</a>, put the board into bootloader mode (you&rsquo;ll see a drive named <em>NANO33BOOT</em> appear) and then execute the following instruction in the folder where you stored the <code>blinky.zip</code>:</p>
-<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">adafruit-nrfutil dfu serial --package blinky.zip -p /dev/ttyACM0 -b <span style="color:#40a070">115200</span>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">adafruit-nrfutil dfu serial --package blinky.zip -p /dev/ttyACM0 -b <span class="m">115200</span>
 </code></pre></div><p><img src="/img/posts/oxidizing-ble/BLESense_Rust_blink.gif" alt="blinkenlight">And here&rsquo;s a BLE Sense (with SWD wires still attached) happily blinking the blue LED with the Rust code. I really wish I had secured the wires better, they detached shortly after flashing the bootloader, which is a bummer as I can&rsquo;t use BMP or J-Link to debug the board (but the flashing over the bootloader works great).</p>
 <p>To be continued! In the next post I will explain more about the Rust code, and how to get the sensors to work.</p>
 <p>Stay tuned!</p>

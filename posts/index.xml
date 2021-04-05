@@ -30,33 +30,6 @@
     </item>
     
     <item>
-      <title>Simplicity blink</title>
-      <link>https://nebelgrau77.github.io/posts/simplicity_blink/</link>
-      <pubDate>Fri, 12 Mar 2021 22:26:05 +0100</pubDate>
-      
-      <guid>https://nebelgrau77.github.io/posts/simplicity_blink/</guid>
-      <description>&lt;p&gt;Blinkenlight on a SiLabs Thunderboard Sense 2&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Jailbreaking the BLESense - pt.2 - sensors</title>
-      <link>https://nebelgrau77.github.io/posts/jailbreaking_blesense_sensors/</link>
-      <pubDate>Sun, 28 Feb 2021 12:10:24 +0100</pubDate>
-      
-      <guid>https://nebelgrau77.github.io/posts/jailbreaking_blesense_sensors/</guid>
-      <description>&lt;p&gt;This is the second part of the post about jailbreaking the BLESense board.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Embedded Rust is fun!</title>
-      <link>https://nebelgrau77.github.io/posts/embedded_rust/</link>
-      <pubDate>Mon, 22 Feb 2021 21:26:10 +0100</pubDate>
-      
-      <guid>https://nebelgrau77.github.io/posts/embedded_rust/</guid>
-      <description>&lt;p&gt;A test of what I want to write about here: for example tinkering with microcontrollers in Rust.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
       <title>About this blog</title>
       <link>https://nebelgrau77.github.io/posts/about-this-blog/</link>
       <pubDate>Mon, 22 Feb 2021 21:20:00 +0100</pubDate>

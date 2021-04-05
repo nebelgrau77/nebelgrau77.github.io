@@ -20,14 +20,5 @@
       <description>&lt;p&gt;Would you like to program your Arduino 33 BLE Sense with something other than Arduino?&lt;/p&gt;</description>
     </item>
     
-    <item>
-      <title>Jailbreaking the BLESense - pt.2 - sensors</title>
-      <link>https://nebelgrau77.github.io/posts/jailbreaking_blesense_sensors/</link>
-      <pubDate>Sun, 28 Feb 2021 12:10:24 +0100</pubDate>
-      
-      <guid>https://nebelgrau77.github.io/posts/jailbreaking_blesense_sensors/</guid>
-      <description>&lt;p&gt;This is the second part of the post about jailbreaking the BLESense board.&lt;/p&gt;</description>
-    </item>
-    
   </channel>
 </rss>
