@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head>
+  <link href="https://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Hugo 0.68.3" />
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Writing a driver in Rust &middot; nebelgrau</title>
+  <meta name="description" content="" />
+
+  
+  <link type="text/css" rel="stylesheet" href="https://nebelgrau77.github.io/css/print.css" media="print">
+  <link type="text/css" rel="stylesheet" href="https://nebelgrau77.github.io/css/poole.css">
+  <link type="text/css" rel="stylesheet" href="https://nebelgrau77.github.io/css/syntax.css">
+  <link type="text/css" rel="stylesheet" href="https://nebelgrau77.github.io/css/hyde.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anton|PT+Sans:400,400i,700">
+
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/img/main/favicon.png">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+  
+  
+</head>
+
+  <body class="theme-base-13 ">
+  <aside class="sidebar">
+  
+  <div class="container sidebar-sticky">
+
+    
+  <div class="author-image">
+    <a href="https://nebelgrau77.github.io/"><img src="/img/main/glitch.png" alt="NEBELGRAU logo" class="author-image"></a>
+  </div>
+
+
+    <nav>
+      <ul class="sidebar-nav">
+        <li><a href="/about/about">ABOUT</a> </li>
+        <li><a href="/posts"> BLOG </a></li>
+      </ul>
+    </nav>
+
+    <p><a href="https://twitter.com/nebelgrau77"><i class="fa fa-twitter"></i></a>&nbsp;&nbsp; 
+      <a href="https://github.com/nebelgrau77"><i class="fa fa-github"></i></a>&nbsp;&nbsp;
+      <a href="mailto:nebelgrau77@gmail.com"><i class="fa fa-envelope"></i></a>&nbsp;&nbsp;
+       </p>
+
+
+    <p>&copy; nebelgrau 2021</p>
+  </div>
+</aside>
+
+    <main class="content container">
+    <div class="post">
+  <h2>Writing a driver in Rust</h2>
+
+  <p>Last updated: 2021-04-04</p>
+  
+  <p>What to do if you want to use some sensor or other device, but there is no driver available? Write one yourself!</p>
+<p>Some time ago I bought a cheap breakout board with a battery-backed RTC chip, <a href="https://www.nxp.com/products/peripherals-and-logic/signal-chain/real-time-clocks/rtcs-with-ic-bus/real-time-clock-calendar:PCF8563">NXP PCF8563</a>. I wanted to use in some Rust-based project, but I couldn&rsquo;t find a driver crate (Rust speak for &ldquo;library&rdquo;) for it.</p>
+<h3 id="how-to-talk-to-an-i2c-device">How to talk to an I2C device?</h3>
+<p>The <a href="https://www.nxp.com/docs/en/data-sheet/PCF8563.pdf">manufacturer&rsquo;s datasheet</a> is really well written and it all seemed pretty straightforward and not too complicated, to I decided to try writing my own, from scratch. Luckily in the open source world you don&rsquo;t always need to do things &ldquo;from scratch&rdquo;, as there&rsquo;s a lot of great code already available to be borrowed and adapted to what you need, and that&rsquo;s what is so great about it!</p>
+<p>First of all, I wanted to understand how to interact with the chip, to get any kind of response from it. After watching this excellent <a href="https://www.youtube.com/watch?v=isOekyygpR8&amp;ab_channel=Digi-Key">tutorial on DigiKey&rsquo;s YouTube channel</a>, I tried something like this:</p>
+<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rust" data-lang="rust"><span style="color:#60a0b0;font-style:italic">// define and set up all what&#39;s necessary: clocks, pins, I2C bus etc.
+</span><span style="color:#60a0b0;font-style:italic"></span><span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#007020;font-weight:bold">const</span><span style="color:#bbb"> </span>PCF_ADDR: <span style="color:#902000">u8</span> <span style="color:#666">=</span><span style="color:#bbb"> </span><span style="color:#40a070">0x51</span>;<span style="color:#bbb"> </span><span style="color:#60a0b0;font-style:italic">// 7-bit address of the module
+</span><span style="color:#60a0b0;font-style:italic"></span><span style="color:#007020;font-weight:bold">const</span><span style="color:#bbb"> </span>PCF_REG: <span style="color:#902000">u8</span> <span style="color:#666">=</span><span style="color:#bbb"> </span><span style="color:#40a070">0x02</span>;<span style="color:#bbb"> </span><span style="color:#60a0b0;font-style:italic">// time registers start at this address
+</span><span style="color:#60a0b0;font-style:italic"></span><span style="color:#007020;font-weight:bold">let</span><span style="color:#bbb"> </span><span style="color:#007020;font-weight:bold">mut</span><span style="color:#bbb"> </span>buffer<span style="color:#bbb"> </span><span style="color:#666">=</span><span style="color:#bbb"> </span>[<span style="color:#40a070">0</span><span style="color:#007020;font-weight:bold">u8</span>;<span style="color:#40a070">3</span>];<span style="color:#bbb"> </span><span style="color:#60a0b0;font-style:italic">// empty buffer to hold seconds, minutes and hours
+</span><span style="color:#60a0b0;font-style:italic"></span><span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#007020;font-weight:bold">loop</span><span style="color:#bbb"> </span>{<span style="color:#bbb">
+</span><span style="color:#bbb">  </span><span style="color:#60a0b0;font-style:italic">// read three bytes starting with PCF_REG address
+</span><span style="color:#60a0b0;font-style:italic"></span><span style="color:#bbb">  </span>i2c.write_read(PCF_ADDR,<span style="color:#bbb"> </span><span style="color:#666">&amp;</span>[PCF_REG],<span style="color:#bbb"> </span><span style="color:#666">&amp;</span><span style="color:#007020;font-weight:bold">mut</span><span style="color:#bbb"> </span>buffer).unwrap();<span style="color:#bbb"> 
+</span><span style="color:#bbb">  </span><span style="color:#60a0b0;font-style:italic">// values are stored in Binary Coded Decimal system
+</span><span style="color:#60a0b0;font-style:italic"></span><span style="color:#bbb">  </span><span style="color:#60a0b0;font-style:italic">// you need some helper function to decode them to actual minutes, hours etc.
+</span><span style="color:#60a0b0;font-style:italic"></span><span style="color:#bbb">  </span><span style="color:#007020;font-weight:bold">let</span><span style="color:#bbb"> </span>secs<span style="color:#bbb"> </span><span style="color:#666">=</span><span style="color:#bbb"> </span>decode_bcd(buffer[<span style="color:#40a070">0</span>]);<span style="color:#bbb"> 
+</span><span style="color:#bbb">  </span><span style="color:#007020;font-weight:bold">let</span><span style="color:#bbb"> </span>mins<span style="color:#bbb"> </span><span style="color:#666">=</span><span style="color:#bbb"> </span>decode_bcd(buffer[<span style="color:#40a070">1</span>]);<span style="color:#bbb">
+</span><span style="color:#bbb">  </span><span style="color:#007020;font-weight:bold">let</span><span style="color:#bbb"> </span>hrs<span style="color:#bbb"> </span><span style="color:#666">=</span><span style="color:#bbb"> </span>decode_bcd(buffer[<span style="color:#40a070">2</span>]);<span style="color:#bbb">
+</span><span style="color:#bbb">
+</span><span style="color:#bbb">  </span><span style="color:#60a0b0;font-style:italic">// print what we just read to serial
+</span><span style="color:#60a0b0;font-style:italic"></span><span style="color:#bbb">  </span>writeln<span style="color:#666">!</span>(tx,<span style="color:#bbb"> </span><span style="color:#4070a0">&#34;{:02}:{:02}:{:02}\r&#34;</span>,<span style="color:#bbb"> </span>hrs,<span style="color:#bbb"> </span>mins,<span style="color:#bbb"> </span>secs).unwrap();<span style="color:#bbb">
+</span><span style="color:#bbb">  </span>}<span style="color:#bbb">
+</span></code></pre></div><p>This worked perfectly, and I was able to read raw values from the registers of my choice. In order to write, for example to set hours to 7, you do something like this:</p>
+<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rust" data-lang="rust"><span style="color:#60a0b0;font-style:italic">// write 0x07 to register 0x04 (HOURS)
+</span><span style="color:#60a0b0;font-style:italic">// (please note that the value has to be encoded into BCD format)
+</span><span style="color:#60a0b0;font-style:italic"></span>i2c.write(PCF_ADDR,<span style="color:#bbb"> </span><span style="color:#666">&amp;</span>[<span style="color:#40a070">0x04</span>,<span style="color:#40a070">0x07</span>]);<span style="color:#bbb"> 
+</span></code></pre></div><p>What if you want to, say, enable the clock output on the dedicated pin, and set the frequency to 32Hz?</p>
+<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rust" data-lang="rust"><span style="color:#60a0b0;font-style:italic">// writes the binary value 10000010 to the register 0x0D (CLKOUT_control); 
+</span><span style="color:#60a0b0;font-style:italic">// the highest bit enables the clock output, the lowest two define frequency
+</span><span style="color:#60a0b0;font-style:italic"></span>i2c.write(PCF_ADDR,<span style="color:#bbb"> </span><span style="color:#666">&amp;</span>[<span style="color:#40a070">0x0D</span>,<span style="color:#40a070">0b1000_0010</span>]);<span style="color:#bbb"> 
+</span></code></pre></div><h3 id="what-do-i-need-a-driver-for-anyway">What do I need a driver for, anyway?</h3>
+<p>It works perfectly, and could be enough to use a simple device like an RTC. After all it only needs to be set up every now and then, and after that it&rsquo;s mainly reading single registers. If you want to make a clock that just displays current time, you don&rsquo;t really need a driver, the code shown above will do. But I wanted something that others could easily use in their project, just like I use drivers for various sensors, displays and such.</p>
+<p>Encouraged by this success, I thought: what if I took some existing Rust driver for some other RTC chip, and tried to adapt it to work with the PCF8563? As I already knew this <a href="https://github.com/eldruin/ds1307-rs">DS1307 driver</a>, which is very well documented, it seemed like the right place to start.</p>
+<p>The whole interaction with an I2C device is basically reading and writing entire registers, and clearing or setting single bits. You also need to clear and/or set groups of bits, which can be accomplished using bit masks. So I started my <code>lib.rs</code> file by copying the following functions for my <code>PCF8563</code> struct:</p>
+<ul>
+<li><code>new</code> to create a new instance of my device,</li>
+<li><code>destroy</code> to return the I2C bus to the application if necessary,</li>
+<li><code>write_register</code> and <code>read_register</code>,</li>
+<li><code>set_register_bit_flag</code> and <code>clear_register_bit_flag</code> for operations on single bits,</li>
+<li><code>is_register_bit_flag_high</code> for checking the status of a single bit</li>
+</ul>
+<p>All these are based on the <code>embedded_hal</code> crate, and are the cornerstone of almost all the other functions in my driver.<br>
+I also copied the <code>Error</code> enum, to handle the possible errors, which in this case can either be I2C bus errors (when something goes wrong in the comunication), or invalid input data, eg. when you want to set the month to something more than 12. Writing this driver is a sort of learning-by-doing experience for me!</p>
+<h3 id="making-a-driver-piece-by-piece">Making a driver, piece by piece.</h3>
+<p>After adding the addresses of various registers, and the main address of the I2C device, I was basically ready to start writing actual functions to interact with my RTC.</p>
+<p>I followed the modular example of Eldruin&rsquo;s driver, and created separate modules:</p>
+<ul>
+<li><code>datetime</code> to handle reading and setting the time</li>
+<li><code>alarm</code> to set the alarm, read the settings, enable/disable the alarm, and enable/disable alarm interrupt</li>
+<li><code>timer</code> to set and read the timer, enable/disable it, enable/disable timer interrupt, and set timer frequency</li>
+<li><code>clkout</code> to enable/disable the clock output, and set its frequency</li>
+<li>and finally <code>control</code> to handle all the other settings, like starting/stopping the clock, etc.</li>
+</ul>
+<p>For the <code>datetime</code> module I copied and adapted the <code>DateTime</code> struct: it&rsquo;s a convenient way to hold the content of all the date and time components. And here&rsquo;s where it turned out that when you&rsquo;re writing a driver (or any code, for that matter), decisions have to be taken! :O So I decided to do the following:</p>
+<ul>
+<li>read and set the date and time only all at once, without separate <code>read_hours</code> or <code>set_month</code> functions: this follows the recommendations in the NXP&rsquo;s datasheet,</li>
+<li>use only the 0-99 values for years, without specifying whether it&rsquo;s 1855 or 2755: this way all the elements of the struct can be unsigned 8-bit values, and the user can handle the year formatting in the application as they prefer,</li>
+<li>keep the <code>century</code> setting out of the <code>DateTime</code> struct, it only indicates whether it&rsquo;s &ldquo;century N&rdquo; or &ldquo;century N+1&rdquo;, useful for the transition between the year xx99 and xx00; as I&rsquo;m writing this driver in 2021, I believe this will work fine :)</li>
+</ul>
+<p>After some thinking I decided to add a second struct, <code>Time</code>, for applications where you only need the clock, but not the calendar. I only created a <code>set_time</code> function, though, to set hours, minutes and seconds in one go. When you need to read the time, there&rsquo;s already the <code>get_datetime</code> function, which will return the <code>DateTime</code> struct, and you can simply discard the irrelevant parts of it.</p>
+<h3 id="how-to-get-the-right-numbers">How to get the right numbers?</h3>
+<p>With the <code>datetime</code> module completed, I already had a working driver that could be used to set the time, and read it. Well, I actually had to add two helper functions, to encode and decode Binary Coded Decimal values. The <a href="https://en.wikipedia.org/wiki/Binary-coded_decimal#:~:text=In%20computing%20and%20electronic%20systems,four%20or%20eight.">BCD</a> seems weird at first, but makes more sense if you consider the applications. For example with a segment display you don&rsquo;t need to figure out, how to separate 2 from 5 in the number 25, to turn one segment as 2 and another one as 5, you just read the relevant pieces of the byte and that&rsquo;s it. It doesn&rsquo;t really matter that much now, but it used to :) The confusing part is that in case of this particular RTC various BCD-formatted registers (date, time and alarm) seem to be all different. If you take a closer look, though, you&rsquo;ll find out that:</p>
+<ul>
+<li>the 7th bit is best to be discarded, as it may contain other, irrelevant for this purpose, information,</li>
+<li>the four lowers bits contain the single digits (digit 5 in our 25 example)</li>
+<li>the remaining three bits [4:6] contain the tens (digit 2 in our example)</li>
+</ul>
+<p>This is what my <code>decode_bcd</code> does: using bit masks and bit-shifting first discards the most significant bit, then gets the digits and the tens. The <code>encode_bcd</code> does the whole operation in reverse (care must be taken when writing such encoded value to the register, to keep the current contents of the 7th bit).</p>
+<h3 id="theres-more-than-just-the-clock-and-the-calendar">There&rsquo;s more than just the clock and the calendar!</h3>
+<p>If you just want the basic clock and calendar functions, that&rsquo;s pretty much it! PCF8563 makes it easy by not having the AM/PM function, no need to worry about setting that (and it can be easily handled in the applicaton anyway). It does have other interesting features, though, so I created all the necessary functions to read and set the alarm, timer and clock output.</p>
+<p>Here&rsquo;s another design choice I made: I&rsquo;m not sure whether it is better or worse than a different approach, and I&rsquo;m looking forward to hearing others&rsquo; opinions on this. At first I created <code>enable_feature()</code> and <code>disable_feature()</code> for every &ldquo;switch&rdquo;, such as turning enabling and disabling the timer, the alarms, or stopping and starting the main clock. But then I thought, that&rsquo;s an awful lot of functions, what if I make it differently? I decided to create <code>control_feature(arg)</code> functions instead, where the argument is one of the two possible values of the <code>Control</code> enum: <code>On</code> or <code>Off</code>. So to enable the timer you need to do this:</p>
+<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rust" data-lang="rust"><span style="color:#60a0b0;font-style:italic">// import the whole crate into the namespace
+</span><span style="color:#60a0b0;font-style:italic"></span><span style="color:#007020;font-weight:bold">use</span><span style="color:#bbb"> </span>pcf8563::<span style="color:#666">*</span>;<span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#60a0b0;font-style:italic">// create a new instance of the PCF8563 device
+</span><span style="color:#60a0b0;font-style:italic"></span>rtc<span style="color:#bbb"> </span><span style="color:#666">=</span><span style="color:#bbb"> </span>pcf8563.new(i2c);<span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#60a0b0;font-style:italic">// enable the timer
+</span><span style="color:#60a0b0;font-style:italic"></span>rtc.control_timer(Control::On).unwrap();<span style="color:#bbb">
+</span><span style="color:#bbb">
+</span></code></pre></div><h3 id="almost-there">Almost there!</h3>
+<p>I&rsquo;m almost done with it, but some things remain to be taken care of:</p>
+<ul>
+<li>add another example, using a different MCU and possibly some different feature, eg. do something when the RTC generates an interrupt</li>
+<li>add functions to read the clock output frequency, timer frequency and timer interrupt mode: I need to decide what the best output of such function would be, the value of the relevant bits?</li>
+<li>publish the crate to crates.io!</li>
+</ul>
+<p>I really learned a lot about Rust and about embedded devices, working on this driver: enums, structs, pattern matching, error handling, it all makes much more sense now! I also learned a few things about documenting the code, for example the importance of <a href="https://keepachangelog.com/en/0.3.0/">keeping a changelog</a> or adding tags to the repository. And I gained even more appreciation for the authors of the crates and libraries and modules I&rsquo;ve been using: it&rsquo;s not just about knowing how things work and how to make the software talk to the hardware, but also about doing so in a user-friendly manner, so that users like me can just take a driver or some other component and start using it right away.</p>
+<p>I hope this will encourage other newbies like myself to take on some more advanced experiments. Happy coding!</p>
+  
+<br>
+
+  
+  &nbsp;<p class = "fa fa-folder-open"></p> Categories: &nbsp;
+  
+    <a href="https://nebelgrau77.github.io/categories/rust/">rust</a
+    >&nbsp;
+  
+    <a href="https://nebelgrau77.github.io/categories/embedded/">embedded</a
+    >&nbsp;
+  
+  
+
+</div>
+
+
+
+<h4>Comments</h4>
+<div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "nebelgrau77" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </main>
+
+    
+      
+    
+  </body>
+</html>
