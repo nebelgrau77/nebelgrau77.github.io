@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Embedded Rust is fun! &middot; nebelgrau</title>
+  <title>Simplicity blink &middot; nebelgrau</title>
   <meta name="description" content="" />
 
   
@@ -59,37 +59,24 @@
 
     <main class="content container">
     <div class="post">
-  <h2>Embedded Rust is fun!</h2>
+  <h2>Simplicity blink</h2>
 
-  <p>Last updated: 2021-02-22</p>
+  <p>Last updated: 2021-03-12</p>
   
-  <p>A test of what I want to write about here: for example tinkering with microcontrollers in Rust.</p>
-<p>Why embedded, and why Rust? Because:</p>
+  <p>Blinkenlight on a SiLabs Thunderboard Sense 2</p>
+<p>Here I want to describe how to make a simple &ldquo;hello, world!&rdquo; example on a <a href="https://www.silabs.com/development-tools/thunderboard/thunderboard-sense-two-kit#manuals">SiLabs Thunderboard Sense 2</a> with <a href="https://docs.silabs.com/simplicity-studio-5-users-guide/1.1.0/ss-5-users-guide-overview/">Simplicity Studio 5</a>, using the <a href="https://docs.silabs.com/gecko-platform/latest/index">Gecko Platform SDK</a>:</p>
 <ul>
-<li>it&rsquo;s cool</li>
-<li>I like it</li>
-<li>I&rsquo;m learning new things!</li>
+<li>start with an Empty C example</li>
+<li>add simple LED driver and delay components</li>
+<li>configure the LED pin</li>
+<li>add some code to blink the green LED every x miliseconds</li>
+<li>build and flash</li>
 </ul>
-<p>So in embedded Rust, you start with something like this:</p>
-<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rust" data-lang="rust"><span style="color:#007020">#[no_main]</span><span style="color:#bbb">
-</span><span style="color:#bbb"></span><span style="color:#007020">#[no_std]</span><span style="color:#bbb">
-</span><span style="color:#bbb">
-</span><span style="color:#bbb"></span><span style="color:#007020;font-weight:bold">use</span><span style="color:#bbb"> </span>panic_halt<span style="color:#bbb"> </span><span style="color:#007020;font-weight:bold">as</span><span style="color:#bbb"> </span>_;<span style="color:#bbb">
-</span><span style="color:#bbb">
-</span><span style="color:#bbb"></span><span style="color:#007020;font-weight:bold">fn</span> <span style="color:#06287e">main</span>()<span style="color:#bbb"> </span>-&gt; <span style="color:#666">!</span><span style="color:#bbb"> </span>{<span style="color:#bbb">
-</span><span style="color:#bbb">    </span><span style="color:#007020;font-weight:bold">let</span><span style="color:#bbb"> </span><span style="color:#007020;font-weight:bold">mut</span><span style="color:#bbb"> </span>x: <span style="color:#902000">u8</span> <span style="color:#666">=</span><span style="color:#bbb"> </span><span style="color:#40a070">42</span>;<span style="color:#bbb">
-</span><span style="color:#bbb">    </span>println<span style="color:#666">!</span>(<span style="color:#4070a0">&#34;Your lucky number is {}!&#34;</span>,<span style="color:#bbb"> </span>x);<span style="color:#bbb"> </span><span style="color:#60a0b0;font-style:italic">//this won&#39;t really work here
-</span><span style="color:#60a0b0;font-style:italic"></span>}<span style="color:#bbb">
-</span></code></pre></div><p>And after you add some more code to initialize various element of the microcontroller and such, you can see something like this:</p>
-<p><img src="/img/posts/embedded-rust-fun/HTS_Sense.jpg" alt="BLESense"></p>
   
 <br>
 
   
   &nbsp;<p class = "fa fa-folder-open"></p> Categories: &nbsp;
-  
-    <a href="https://nebelgrau77.github.io/categories/rust/">rust</a
-    >&nbsp;
   
     <a href="https://nebelgrau77.github.io/categories/embedded/">embedded</a
     >&nbsp;
