@@ -231,8 +231,14 @@ ul {
   color:#022c4e;
   font-weight:bold;
   font-style: italic;
-
  } 
+.theme-base-13 .content li code {
+  color:#022c4e;
+  font-weight:bold;
+  font-style: italic;
+ } 
+
+
 .theme-base-13 .related-posts li a:hover {
   color: #000000;
 }
