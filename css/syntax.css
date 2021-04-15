@@ -1,4 +1,4 @@
-/* Background */ .chroma { color: #E5C07B; background-color: #282C34 }
+/* Background */ .chroma { color: #E5C07B; background-color: #00ff00 }
 /* LineTableTD */ .chroma .lntd { vertical-align: top; padding: 0; margin: 0; border: 0; }
 /* LineTable */ .chroma .lntable { border-spacing: 0; padding: 0; margin: 0; border: 0; width: auto; overflow: auto; display: block; }
 /* LineHighlight */ .chroma .hl { display: block; width: 100%;background-color: #ffffcc }
@@ -14,7 +14,7 @@
 /* NameConstant */ .chroma .no { color: #61AFEF }
 /* NameFunction */ .chroma .nf { color: #61AFEF }
 /* NameVariable */ .chroma .nv { color: #61AFEF }
-/* LiteralString */ .chroma .s { color: #00ffff }
+/* LiteralString */ .chroma .s { color: #98C379}
 /* LiteralStringAffix */ .chroma .sa { color: #87ceeb }
 /* LiteralStringBacktick */ .chroma .sb { color: #87ceeb }
 /* LiteralStringChar */ .chroma .sc { color: #87ceeb }

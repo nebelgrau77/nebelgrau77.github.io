@@ -46,7 +46,6 @@ html {
 }
 
 
-
 /*
  * Sidebar
  *
@@ -223,7 +222,16 @@ ul {
 .theme-base-13 .sidebar {
   background-color: #232323;
 }
-.theme-base-13 .content a,
-.theme-base-13 .related-posts li a:hover {
-  color: #292a27;
+.theme-base-13 .content a 
+{
+  color: #232323;
+  font-weight:bold;
 }
+.theme-base-13 .content p code {
+  color:#232323;
+  font-weight:bold;
+ } 
+.theme-base-13 .related-posts li a:hover {
+  color: #000000;
+}
+
