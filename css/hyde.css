@@ -228,8 +228,10 @@ ul {
   font-weight:bold;
 }
 .theme-base-13 .content p code {
-  color:#232323;
+  color:#022c4e;
   font-weight:bold;
+  font-style: italic;
+
  } 
 .theme-base-13 .related-posts li a:hover {
   color: #000000;
