@@ -225,7 +225,7 @@ ul {
 .theme-base-13 .content a 
 {
   color: #232323;
-  font-style: italic;
+  font-weight:bold;
 }
 .theme-base-13 .content p code {
   background-color: #ffffff;
@@ -236,10 +236,8 @@ ul {
 .theme-base-13 .content li code {
   background-color: #ffffff;
   color:#022c4e;
-  font-weight:bold;
-  
+  font-weight:bold;  
  } 
-
 .theme-base-13 .related-posts li a:hover {
   color: #000000;
 }
