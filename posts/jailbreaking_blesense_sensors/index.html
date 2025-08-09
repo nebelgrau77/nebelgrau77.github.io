@@ -53,7 +53,7 @@
        </p>
 
 
-    <p>&copy; nebelgrau 2021</p>
+    <p>&copy; nebelgrau 2022</p>
   </div>
 </aside>
 
@@ -65,6 +65,11 @@
   
   <p>This is the second part of the post about jailbreaking the BLESense board.</p>
 <p>Here I will explain how the sensors are wired and how to use them.</p>
+<p>As explained in the <a href="/posts/oxidizing_ble.md">previous post</a> you can jailbreak the BLE Sense.</p>
+<ul>
+<li>use <a href="https://github.com/nrf-rs/nrf-hal/tree/master/examples">nRF52840 examples</a></li>
+<li>check the <a href="https://content.arduino.cc/assets/NANO33BLE_V2.0_sch.pdf">schematics</a></li>
+</ul>
 <p><img src="/img/posts/jailbreaking-ble/sensor_signals.png" alt="power to the sensor"></p>
 <p><a href="https://github.com/arduino/ArduinoCore-mbed/blob/master/variants/ARDUINO_NANO33BLE/pins_arduino.h">https://github.com/arduino/ArduinoCore-mbed/blob/master/variants/ARDUINO_NANO33BLE/pins_arduino.h</a></p>
 <p><a href="https://content.arduino.cc/assets/NANO33BLE_V2.0_sch.pdf">https://content.arduino.cc/assets/NANO33BLE_V2.0_sch.pdf</a></p>
@@ -80,18 +85,18 @@
 </ul>
 <p><a href="https://learn.adafruit.com/introducing-the-adafruit-nrf52840-feather/hathach-memory-map">https://learn.adafruit.com/introducing-the-adafruit-nrf52840-feather/hathach-memory-map</a></p>
 <p>As you can see in the diagrams, the SoftDevice takes up space at the bottom of FLASH and RAM, so the values must be offset there.</p>
-<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">MEMORY
-{  
-  FLASH (rx)<span style="color:#666">:</span> ORIGIN <span style="color:#666">=</span> <span style="color:#40a070">0x26000</span>,    LENGTH <span style="color:#666">=</span> <span style="color:#40a070">0xED000</span> <span style="color:#666">-</span> <span style="color:#40a070">0x26000</span>
-  RAM (rwx)<span style="color:#666">:</span>  ORIGIN <span style="color:#666">=</span> <span style="color:#40a070">0x20003400</span>, LENGTH <span style="color:#666">=</span> <span style="color:#40a070">0x20010000</span> <span style="color:#666">-</span> <span style="color:#40a070">0x20003400</span>
-}
+<div class="highlight"><pre class="chroma"><code class="language-c" data-lang="c"><span class="n">MEMORY</span>
+<span class="p">{</span>  
+  <span class="n">FLASH</span> <span class="p">(</span><span class="n">rx</span><span class="p">)</span><span class="o">:</span> <span class="n">ORIGIN</span> <span class="o">=</span> <span class="mh">0x26000</span><span class="p">,</span>    <span class="n">LENGTH</span> <span class="o">=</span> <span class="mh">0xED000</span> <span class="o">-</span> <span class="mh">0x26000</span>
+  <span class="n">RAM</span> <span class="p">(</span><span class="n">rwx</span><span class="p">)</span><span class="o">:</span>  <span class="n">ORIGIN</span> <span class="o">=</span> <span class="mh">0x20003400</span><span class="p">,</span> <span class="n">LENGTH</span> <span class="o">=</span> <span class="mh">0x20010000</span> <span class="o">-</span> <span class="mh">0x20003400</span>
+<span class="p">}</span>
 </code></pre></div><ul>
 <li><strong>embedded target definition</strong></li>
 </ul>
 <p><a href="https://rust-embedded.github.io/blog/2018-08-2x-psa-cortex-m-breakage/">https://rust-embedded.github.io/blog/2018-08-2x-psa-cortex-m-breakage/</a> - need to read this and experiment</p>
-<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml">[build]
-target = <span style="color:#4070a0">&#34;thumbv7em-none-eabihf&#34;</span>
-rustflags = [<span style="color:#4070a0">&#34;-C&#34;</span>, <span style="color:#4070a0">&#34;link-arg=-Tlink.x&#34;</span>]
+<div class="highlight"><pre class="chroma"><code class="language-toml" data-lang="toml"><span class="p">[</span><span class="nx">build</span><span class="p">]</span>
+<span class="nx">target</span> <span class="p">=</span> <span class="s2">&#34;thumbv7em-none-eabihf&#34;</span>
+<span class="nx">rustflags</span> <span class="p">=</span> <span class="p">[</span><span class="s2">&#34;-C&#34;</span><span class="p">,</span> <span class="s2">&#34;link-arg=-Tlink.x&#34;</span><span class="p">]</span>
 </code></pre></div><ul>
 <li>
 <p><strong>nRF-HAL</strong></p>

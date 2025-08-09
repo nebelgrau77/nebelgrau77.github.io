@@ -1,33 +1,26 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>embedded on nebelgrau</title>
-    <link>https://nebelgrau77.github.io/categories/embedded/</link>
-    <description>Recent content in embedded on nebelgrau</description>
+    <title>Embedded on nebelgrau</title>
+    <link>http://localhost:1313/categories/embedded/</link>
+    <description>Recent content in Embedded on nebelgrau</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 04 Apr 2021 19:53:26 +0200</lastBuildDate>
-    
-	<atom:link href="https://nebelgrau77.github.io/categories/embedded/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sun, 04 Apr 2021 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/embedded/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Writing a driver in Rust</title>
-      <link>https://nebelgrau77.github.io/posts/rust_driver/</link>
-      <pubDate>Sun, 04 Apr 2021 19:53:26 +0200</pubDate>
-      
-      <guid>https://nebelgrau77.github.io/posts/rust_driver/</guid>
+      <link>http://localhost:1313/posts/rust_driver/</link>
+      <pubDate>Sun, 04 Apr 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/rust_driver/</guid>
       <description>&lt;p&gt;What to do if you want to use some sensor or other device, but there is no driver available? Write one yourself!&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Adventures in tinkering, or how I jailbroke my BLE Sense</title>
-      <link>https://nebelgrau77.github.io/posts/jailbreaking_blesense/</link>
+      <link>http://localhost:1313/posts/jailbreaking_blesense/</link>
       <pubDate>Sat, 13 Mar 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://nebelgrau77.github.io/posts/jailbreaking_blesense/</guid>
+      <guid>http://localhost:1313/posts/jailbreaking_blesense/</guid>
       <description>&lt;p&gt;Would you like to program your Arduino 33 BLE Sense with something other than Arduino?&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

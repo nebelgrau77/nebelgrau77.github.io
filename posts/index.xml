@@ -2,50 +2,46 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on nebelgrau</title>
-    <link>https://nebelgrau77.github.io/posts/</link>
+    <link>http://localhost:1313/posts/</link>
     <description>Recent content in Posts on nebelgrau</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 04 Apr 2021 19:53:26 +0200</lastBuildDate>
-    
-	<atom:link href="https://nebelgrau77.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sat, 09 Aug 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hello, world.. again!</title>
+      <link>http://localhost:1313/posts/helloworld_again/</link>
+      <pubDate>Sat, 09 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/helloworld_again/</guid>
+      <description>&lt;p&gt;I haven&amp;rsquo;t forgotten about this blog&amp;hellip;&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Writing a driver in Rust</title>
-      <link>https://nebelgrau77.github.io/posts/rust_driver/</link>
-      <pubDate>Sun, 04 Apr 2021 19:53:26 +0200</pubDate>
-      
-      <guid>https://nebelgrau77.github.io/posts/rust_driver/</guid>
+      <link>http://localhost:1313/posts/rust_driver/</link>
+      <pubDate>Sun, 04 Apr 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/rust_driver/</guid>
       <description>&lt;p&gt;What to do if you want to use some sensor or other device, but there is no driver available? Write one yourself!&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Adventures in tinkering, or how I jailbroke my BLE Sense</title>
-      <link>https://nebelgrau77.github.io/posts/jailbreaking_blesense/</link>
+      <link>http://localhost:1313/posts/jailbreaking_blesense/</link>
       <pubDate>Sat, 13 Mar 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://nebelgrau77.github.io/posts/jailbreaking_blesense/</guid>
+      <guid>http://localhost:1313/posts/jailbreaking_blesense/</guid>
       <description>&lt;p&gt;Would you like to program your Arduino 33 BLE Sense with something other than Arduino?&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>About this blog</title>
-      <link>https://nebelgrau77.github.io/posts/about-this-blog/</link>
-      <pubDate>Mon, 22 Feb 2021 21:20:00 +0100</pubDate>
-      
-      <guid>https://nebelgrau77.github.io/posts/about-this-blog/</guid>
+      <link>http://localhost:1313/posts/about-this-blog/</link>
+      <pubDate>Mon, 22 Feb 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/about-this-blog/</guid>
       <description>&lt;p&gt;The how and why of this simple blog, in my own words :)&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Hello, world!</title>
-      <link>https://nebelgrau77.github.io/posts/helloworld/</link>
+      <link>http://localhost:1313/posts/helloworld/</link>
       <pubDate>Sun, 14 Feb 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://nebelgrau77.github.io/posts/helloworld/</guid>
+      <guid>http://localhost:1313/posts/helloworld/</guid>
       <description>&lt;p&gt;The ancient computer tradition requires the first post to be the &amp;ldquo;Hello, world!&amp;rdquo;&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

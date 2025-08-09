@@ -1,24 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>blog on nebelgrau</title>
-    <link>https://nebelgrau77.github.io/categories/blog/</link>
-    <description>Recent content in blog on nebelgrau</description>
+    <title>Blog on nebelgrau</title>
+    <link>http://localhost:1313/categories/blog/</link>
+    <description>Recent content in Blog on nebelgrau</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 22 Feb 2021 21:20:00 +0100</lastBuildDate>
-    
-	<atom:link href="https://nebelgrau77.github.io/categories/blog/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Mon, 22 Feb 2021 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>About this blog</title>
-      <link>https://nebelgrau77.github.io/posts/about-this-blog/</link>
-      <pubDate>Mon, 22 Feb 2021 21:20:00 +0100</pubDate>
-      
-      <guid>https://nebelgrau77.github.io/posts/about-this-blog/</guid>
+      <link>http://localhost:1313/posts/about-this-blog/</link>
+      <pubDate>Mon, 22 Feb 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/about-this-blog/</guid>
       <description>&lt;p&gt;The how and why of this simple blog, in my own words :)&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

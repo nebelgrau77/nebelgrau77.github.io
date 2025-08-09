@@ -1,89 +1,58 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
   <url>
-    <loc>https://nebelgrau77.github.io/categories/</loc>
-    <lastmod>2021-04-04T19:53:26+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://nebelgrau77.github.io/categories/embedded/</loc>
-    <lastmod>2021-04-04T19:53:26+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://nebelgrau77.github.io/</loc>
-    <lastmod>2021-04-04T19:53:26+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://nebelgrau77.github.io/posts/</loc>
-    <lastmod>2021-04-04T19:53:26+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://nebelgrau77.github.io/categories/rust/</loc>
-    <lastmod>2021-04-04T19:53:26+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://nebelgrau77.github.io/posts/rust_driver/</loc>
-    <lastmod>2021-04-04T19:53:26+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://nebelgrau77.github.io/posts/jailbreaking_blesense/</loc>
+    <loc>http://localhost:1313/posts/helloworld_again/</loc>
+    <lastmod>2025-08-09T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/</loc>
+    <lastmod>2025-08-09T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/</loc>
+    <lastmod>2025-08-09T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/</loc>
+    <lastmod>2021-04-04T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/embedded/</loc>
+    <lastmod>2021-04-04T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/rust/</loc>
+    <lastmod>2021-04-04T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/rust_driver/</loc>
+    <lastmod>2021-04-04T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/jailbreaking_blesense/</loc>
     <lastmod>2021-03-13T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://nebelgrau77.github.io/categories/arduino/</loc>
+  </url><url>
+    <loc>http://localhost:1313/categories/arduino/</loc>
     <lastmod>2021-03-13T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://nebelgrau77.github.io/categories/tinyml/</loc>
+  </url><url>
+    <loc>http://localhost:1313/categories/tinyml/</loc>
     <lastmod>2021-03-13T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://nebelgrau77.github.io/posts/about-this-blog/</loc>
-    <lastmod>2021-02-22T21:20:00+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://nebelgrau77.github.io/categories/blog/</loc>
-    <lastmod>2021-02-22T21:20:00+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://nebelgrau77.github.io/categories/coding/</loc>
+  </url><url>
+    <loc>http://localhost:1313/posts/about-this-blog/</loc>
+    <lastmod>2021-02-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/blog/</loc>
+    <lastmod>2021-02-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/coding/</loc>
     <lastmod>2021-02-14T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://nebelgrau77.github.io/posts/helloworld/</loc>
+  </url><url>
+    <loc>http://localhost:1313/posts/helloworld/</loc>
     <lastmod>2021-02-14T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://nebelgrau77.github.io/categories/python/</loc>
+  </url><url>
+    <loc>http://localhost:1313/categories/python/</loc>
     <lastmod>2021-02-14T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://nebelgrau77.github.io/about/about/</loc>
+  </url><url>
+    <loc>http://localhost:1313/about/about/</loc>
     <lastmod>2021-02-07T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://nebelgrau77.github.io/about/</loc>
+  </url><url>
+    <loc>http://localhost:1313/about/</loc>
     <lastmod>2021-02-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/</loc>
   </url>
-  
-  <url>
-    <loc>https://nebelgrau77.github.io/tags/</loc>
-  </url>
-  
 </urlset>

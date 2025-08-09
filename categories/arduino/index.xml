@@ -1,24 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>arduino on nebelgrau</title>
-    <link>https://nebelgrau77.github.io/categories/arduino/</link>
-    <description>Recent content in arduino on nebelgrau</description>
+    <title>Arduino on nebelgrau</title>
+    <link>http://localhost:1313/categories/arduino/</link>
+    <description>Recent content in Arduino on nebelgrau</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 13 Mar 2021 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://nebelgrau77.github.io/categories/arduino/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <atom:link href="http://localhost:1313/categories/arduino/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Adventures in tinkering, or how I jailbroke my BLE Sense</title>
-      <link>https://nebelgrau77.github.io/posts/jailbreaking_blesense/</link>
+      <link>http://localhost:1313/posts/jailbreaking_blesense/</link>
       <pubDate>Sat, 13 Mar 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://nebelgrau77.github.io/posts/jailbreaking_blesense/</guid>
+      <guid>http://localhost:1313/posts/jailbreaking_blesense/</guid>
       <description>&lt;p&gt;Would you like to program your Arduino 33 BLE Sense with something other than Arduino?&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>
