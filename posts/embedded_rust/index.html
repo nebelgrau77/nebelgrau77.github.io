@@ -3,7 +3,7 @@
 <head>
   <link href="https://gmpg.org/xfn/11" rel="profile">
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <meta name="generator" content="Hugo 0.68.3" />
+  <meta name="generator" content="Hugo 0.123.7">
 
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -47,13 +47,13 @@
       </ul>
     </nav>
 
-    <p><a href="https://twitter.com/nebelgrau77"><i class="fa fa-twitter"></i></a>&nbsp;&nbsp; 
+    <p> 
       <a href="https://github.com/nebelgrau77"><i class="fa fa-github"></i></a>&nbsp;&nbsp;
       <a href="mailto:nebelgrau77@gmail.com"><i class="fa fa-envelope"></i></a>&nbsp;&nbsp;
        </p>
 
 
-    <p>&copy; nebelgrau 2022</p>
+    <p>&copy; nebelgrau 2025</p>
   </div>
 </aside>
 
@@ -71,16 +71,16 @@
 <li>I&rsquo;m learning new things!</li>
 </ul>
 <p>So in embedded Rust, you start with something like this:</p>
-<div class="highlight"><pre class="chroma"><code class="language-rust" data-lang="rust"><span class="cp">#[no_main]</span><span class="w">
-</span><span class="w"></span><span class="cp">#[no_std]</span><span class="w">
-</span><span class="w">
-</span><span class="w"></span><span class="k">use</span><span class="w"> </span><span class="n">panic_halt</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">_</span><span class="p">;</span><span class="w">
-</span><span class="w">
-</span><span class="w"></span><span class="k">fn</span> <span class="nf">main</span><span class="p">()</span><span class="w"> </span>-&gt; <span class="o">!</span><span class="w"> </span><span class="p">{</span><span class="w">
-</span><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="k">mut</span><span class="w"> </span><span class="n">x</span>: <span class="kt">u8</span> <span class="o">=</span><span class="w"> </span><span class="mi">42</span><span class="p">;</span><span class="w">
-</span><span class="w">    </span><span class="n">println</span><span class="o">!</span><span class="p">(</span><span class="s">&#34;Your lucky number is {}!&#34;</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="p">);</span><span class="w"> </span><span class="c1">//this won&#39;t really work here
-</span><span class="c1"></span><span class="p">}</span><span class="w">
-</span></code></pre></div><p>And after you add some more code to initialize various element of the microcontroller and such, you can see something like this:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-rust" data-lang="rust"><span class="line"><span class="cl"><span class="cp">#[no_main]</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="cp">#[no_std]</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">use</span><span class="w"> </span><span class="n">panic_halt</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">_</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">fn</span> <span class="nf">main</span><span class="p">()</span><span class="w"> </span>-&gt; <span class="o">!</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="k">mut</span><span class="w"> </span><span class="n">x</span>: <span class="kt">u8</span> <span class="o">=</span><span class="w"> </span><span class="mi">42</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="fm">println!</span><span class="p">(</span><span class="s">&#34;Your lucky number is </span><span class="si">{}</span><span class="s">!&#34;</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="p">);</span><span class="w"> </span><span class="c1">//this won&#39;t really work here
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><p>And after you add some more code to initialize various element of the microcontroller and such, you can see something like this:</p>
 <p><img src="/img/posts/embedded-rust-fun/HTS_Sense.jpg" alt="BLESense"></p>
   
 <br>
@@ -102,8 +102,8 @@
 
 <h4>Comments</h4>
 <div id="disqus_thread"></div>
-<script type="application/javascript">
-    var disqus_config = function () {
+<script>
+    window.disqus_config = function () {
     
     
     

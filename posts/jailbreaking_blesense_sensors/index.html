@@ -3,7 +3,7 @@
 <head>
   <link href="https://gmpg.org/xfn/11" rel="profile">
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <meta name="generator" content="Hugo 0.68.3" />
+  <meta name="generator" content="Hugo 0.123.7">
 
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -47,13 +47,13 @@
       </ul>
     </nav>
 
-    <p><a href="https://twitter.com/nebelgrau77"><i class="fa fa-twitter"></i></a>&nbsp;&nbsp; 
+    <p> 
       <a href="https://github.com/nebelgrau77"><i class="fa fa-github"></i></a>&nbsp;&nbsp;
       <a href="mailto:nebelgrau77@gmail.com"><i class="fa fa-envelope"></i></a>&nbsp;&nbsp;
        </p>
 
 
-    <p>&copy; nebelgrau 2022</p>
+    <p>&copy; nebelgrau 2025</p>
   </div>
 </aside>
 
@@ -61,10 +61,11 @@
     <div class="post">
   <h2>Jailbreaking the BLESense - pt.2 - sensors</h2>
 
-  <p>Last updated: 2021-02-28</p>
+  <p>Last updated: 2023-03-15</p>
   
   <p>This is the second part of the post about jailbreaking the BLESense board.</p>
-<p>Here I will explain how the sensors are wired and how to use them.</p>
+<p>Here I will explain how to get the onboard sensors to work: how they are wired and how to use them. They require some pins to be switched on, for the I2C bus and the actual sensors to be active.</p>
+<p>It has to be specified that this is about the original BLESense, not the new v2 (which has different sensors and possibly different PCB setup).</p>
 <p>As explained in the <a href="/posts/oxidizing_ble.md">previous post</a> you can jailbreak the BLE Sense.</p>
 <ul>
 <li>use <a href="https://github.com/nrf-rs/nrf-hal/tree/master/examples">nRF52840 examples</a></li>
@@ -85,19 +86,19 @@
 </ul>
 <p><a href="https://learn.adafruit.com/introducing-the-adafruit-nrf52840-feather/hathach-memory-map">https://learn.adafruit.com/introducing-the-adafruit-nrf52840-feather/hathach-memory-map</a></p>
 <p>As you can see in the diagrams, the SoftDevice takes up space at the bottom of FLASH and RAM, so the values must be offset there.</p>
-<div class="highlight"><pre class="chroma"><code class="language-c" data-lang="c"><span class="n">MEMORY</span>
-<span class="p">{</span>  
-  <span class="n">FLASH</span> <span class="p">(</span><span class="n">rx</span><span class="p">)</span><span class="o">:</span> <span class="n">ORIGIN</span> <span class="o">=</span> <span class="mh">0x26000</span><span class="p">,</span>    <span class="n">LENGTH</span> <span class="o">=</span> <span class="mh">0xED000</span> <span class="o">-</span> <span class="mh">0x26000</span>
-  <span class="n">RAM</span> <span class="p">(</span><span class="n">rwx</span><span class="p">)</span><span class="o">:</span>  <span class="n">ORIGIN</span> <span class="o">=</span> <span class="mh">0x20003400</span><span class="p">,</span> <span class="n">LENGTH</span> <span class="o">=</span> <span class="mh">0x20010000</span> <span class="o">-</span> <span class="mh">0x20003400</span>
-<span class="p">}</span>
-</code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="n">MEMORY</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>  
+</span></span><span class="line"><span class="cl">  <span class="nf">FLASH</span> <span class="p">(</span><span class="n">rx</span><span class="p">)</span><span class="o">:</span> <span class="n">ORIGIN</span> <span class="o">=</span> <span class="mh">0x26000</span><span class="p">,</span>    <span class="n">LENGTH</span> <span class="o">=</span> <span class="mh">0xED000</span> <span class="o">-</span> <span class="mh">0x26000</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">RAM</span> <span class="p">(</span><span class="n">rwx</span><span class="p">)</span><span class="o">:</span>  <span class="n">ORIGIN</span> <span class="o">=</span> <span class="mh">0x20003400</span><span class="p">,</span> <span class="n">LENGTH</span> <span class="o">=</span> <span class="mh">0x20010000</span> <span class="o">-</span> <span class="mh">0x20003400</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><ul>
 <li><strong>embedded target definition</strong></li>
 </ul>
 <p><a href="https://rust-embedded.github.io/blog/2018-08-2x-psa-cortex-m-breakage/">https://rust-embedded.github.io/blog/2018-08-2x-psa-cortex-m-breakage/</a> - need to read this and experiment</p>
-<div class="highlight"><pre class="chroma"><code class="language-toml" data-lang="toml"><span class="p">[</span><span class="nx">build</span><span class="p">]</span>
-<span class="nx">target</span> <span class="p">=</span> <span class="s2">&#34;thumbv7em-none-eabihf&#34;</span>
-<span class="nx">rustflags</span> <span class="p">=</span> <span class="p">[</span><span class="s2">&#34;-C&#34;</span><span class="p">,</span> <span class="s2">&#34;link-arg=-Tlink.x&#34;</span><span class="p">]</span>
-</code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="p">[</span><span class="nx">build</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="nx">target</span> <span class="p">=</span> <span class="s2">&#34;thumbv7em-none-eabihf&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">rustflags</span> <span class="p">=</span> <span class="p">[</span><span class="s2">&#34;-C&#34;</span><span class="p">,</span> <span class="s2">&#34;link-arg=-Tlink.x&#34;</span><span class="p">]</span>
+</span></span></code></pre></div><ul>
 <li>
 <p><strong>nRF-HAL</strong></p>
 </li>
@@ -145,8 +146,8 @@
 
 <h4>Comments</h4>
 <div id="disqus_thread"></div>
-<script type="application/javascript">
-    var disqus_config = function () {
+<script>
+    window.disqus_config = function () {
     
     
     

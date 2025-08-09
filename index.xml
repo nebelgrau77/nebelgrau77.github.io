@@ -2,52 +2,94 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>nebelgrau</title>
-    <link>http://localhost:1313/</link>
+    <link>https://nebelgrau77.github.io/</link>
     <description>Recent content on nebelgrau</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 09 Aug 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://nebelgrau77.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hello, world.. again!</title>
-      <link>http://localhost:1313/posts/helloworld_again/</link>
+      <link>https://nebelgrau77.github.io/posts/helloworld_again/</link>
       <pubDate>Sat, 09 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/helloworld_again/</guid>
+      <guid>https://nebelgrau77.github.io/posts/helloworld_again/</guid>
       <description>&lt;p&gt;I haven&amp;rsquo;t forgotten about this blog&amp;hellip;&lt;/p&gt;</description>
     </item>
     <item>
+      <title>Data over BLE</title>
+      <link>https://nebelgrau77.github.io/posts/data_over_ble/</link>
+      <pubDate>Sun, 19 Mar 2023 00:00:00 +0000</pubDate>
+      <guid>https://nebelgrau77.github.io/posts/data_over_ble/</guid>
+      <description>Here I will explain how to send some sensor data over Bluetooth Low Energy, using the embassy-nrf.</description>
+    </item>
+    <item>
+      <title>Update the Adafruit bootloader</title>
+      <link>https://nebelgrau77.github.io/posts/bootloader_update/</link>
+      <pubDate>Fri, 17 Mar 2023 00:00:00 +0000</pubDate>
+      <guid>https://nebelgrau77.github.io/posts/bootloader_update/</guid>
+      <description>Here I will explain how to build an updated version of the Adafruit bootloader, with a different version of the nRF SoftDevice (S140 7.3.0).</description>
+    </item>
+    <item>
+      <title>Jailbreaking the BLESense - pt.2 - sensors</title>
+      <link>https://nebelgrau77.github.io/posts/jailbreaking_blesense_sensors/</link>
+      <pubDate>Wed, 15 Mar 2023 00:00:00 +0000</pubDate>
+      <guid>https://nebelgrau77.github.io/posts/jailbreaking_blesense_sensors/</guid>
+      <description>&lt;p&gt;This is the second part of the post about jailbreaking the BLESense board.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>do I even remember how to do it?</title>
+      <link>https://nebelgrau77.github.io/posts/comeback_test/</link>
+      <pubDate>Fri, 16 Sep 2022 00:00:00 +0000</pubDate>
+      <guid>https://nebelgrau77.github.io/posts/comeback_test/</guid>
+      <description>&lt;p&gt;I just want to see if I remember how to add a post to this blog :O&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>Writing a driver in Rust</title>
-      <link>http://localhost:1313/posts/rust_driver/</link>
+      <link>https://nebelgrau77.github.io/posts/rust_driver/</link>
       <pubDate>Sun, 04 Apr 2021 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/rust_driver/</guid>
+      <guid>https://nebelgrau77.github.io/posts/rust_driver/</guid>
       <description>&lt;p&gt;What to do if you want to use some sensor or other device, but there is no driver available? Write one yourself!&lt;/p&gt;</description>
     </item>
     <item>
       <title>Adventures in tinkering, or how I jailbroke my BLE Sense</title>
-      <link>http://localhost:1313/posts/jailbreaking_blesense/</link>
+      <link>https://nebelgrau77.github.io/posts/jailbreaking_blesense/</link>
       <pubDate>Sat, 13 Mar 2021 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/jailbreaking_blesense/</guid>
+      <guid>https://nebelgrau77.github.io/posts/jailbreaking_blesense/</guid>
       <description>&lt;p&gt;Would you like to program your Arduino 33 BLE Sense with something other than Arduino?&lt;/p&gt;</description>
     </item>
     <item>
+      <title>Simplicity blink</title>
+      <link>https://nebelgrau77.github.io/posts/simplicity_blink/</link>
+      <pubDate>Fri, 12 Mar 2021 22:26:05 +0100</pubDate>
+      <guid>https://nebelgrau77.github.io/posts/simplicity_blink/</guid>
+      <description>&lt;p&gt;Blinkenlight on a SiLabs Thunderboard Sense 2&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Embedded Rust is fun!</title>
+      <link>https://nebelgrau77.github.io/posts/embedded_rust/</link>
+      <pubDate>Mon, 22 Feb 2021 21:26:10 +0100</pubDate>
+      <guid>https://nebelgrau77.github.io/posts/embedded_rust/</guid>
+      <description>&lt;p&gt;A test of what I want to write about here: for example tinkering with microcontrollers in Rust.&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>About this blog</title>
-      <link>http://localhost:1313/posts/about-this-blog/</link>
+      <link>https://nebelgrau77.github.io/posts/about-this-blog/</link>
       <pubDate>Mon, 22 Feb 2021 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/about-this-blog/</guid>
+      <guid>https://nebelgrau77.github.io/posts/about-this-blog/</guid>
       <description>&lt;p&gt;The how and why of this simple blog, in my own words :)&lt;/p&gt;</description>
     </item>
     <item>
       <title>Hello, world!</title>
-      <link>http://localhost:1313/posts/helloworld/</link>
+      <link>https://nebelgrau77.github.io/posts/helloworld/</link>
       <pubDate>Sun, 14 Feb 2021 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/helloworld/</guid>
+      <guid>https://nebelgrau77.github.io/posts/helloworld/</guid>
       <description>&lt;p&gt;The ancient computer tradition requires the first post to be the &amp;ldquo;Hello, world!&amp;rdquo;&lt;/p&gt;</description>
     </item>
     <item>
       <title>About me</title>
-      <link>http://localhost:1313/about/about/</link>
+      <link>https://nebelgrau77.github.io/about/about/</link>
       <pubDate>Sun, 07 Feb 2021 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/about/about/</guid>
+      <guid>https://nebelgrau77.github.io/about/about/</guid>
       <description>&lt;p&gt;My name&amp;rsquo;s Michał, and I&amp;rsquo;m a self-described aspiring data witcher, wannabe Rustacean, Pythonista and TinyML afficionado.&lt;/p&gt;</description>
     </item>
   </channel>

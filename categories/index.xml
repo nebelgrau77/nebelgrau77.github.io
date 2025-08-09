@@ -2,59 +2,94 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on nebelgrau</title>
-    <link>http://localhost:1313/categories/</link>
+    <link>https://nebelgrau77.github.io/categories/</link>
     <description>Recent content in Categories on nebelgrau</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 04 Apr 2021 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 19 Mar 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://nebelgrau77.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>BLE</title>
+      <link>https://nebelgrau77.github.io/categories/ble/</link>
+      <pubDate>Sun, 19 Mar 2023 00:00:00 +0000</pubDate>
+      <guid>https://nebelgrau77.github.io/categories/ble/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Bluetooth</title>
+      <link>https://nebelgrau77.github.io/categories/bluetooth/</link>
+      <pubDate>Sun, 19 Mar 2023 00:00:00 +0000</pubDate>
+      <guid>https://nebelgrau77.github.io/categories/bluetooth/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Embedded</title>
-      <link>http://localhost:1313/categories/embedded/</link>
-      <pubDate>Sun, 04 Apr 2021 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/categories/embedded/</guid>
+      <link>https://nebelgrau77.github.io/categories/embedded/</link>
+      <pubDate>Sun, 19 Mar 2023 00:00:00 +0000</pubDate>
+      <guid>https://nebelgrau77.github.io/categories/embedded/</guid>
       <description></description>
     </item>
     <item>
       <title>Rust</title>
-      <link>http://localhost:1313/categories/rust/</link>
-      <pubDate>Sun, 04 Apr 2021 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/categories/rust/</guid>
+      <link>https://nebelgrau77.github.io/categories/rust/</link>
+      <pubDate>Sun, 19 Mar 2023 00:00:00 +0000</pubDate>
+      <guid>https://nebelgrau77.github.io/categories/rust/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Adafruit</title>
+      <link>https://nebelgrau77.github.io/categories/adafruit/</link>
+      <pubDate>Fri, 17 Mar 2023 00:00:00 +0000</pubDate>
+      <guid>https://nebelgrau77.github.io/categories/adafruit/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Bootloader</title>
+      <link>https://nebelgrau77.github.io/categories/bootloader/</link>
+      <pubDate>Fri, 17 Mar 2023 00:00:00 +0000</pubDate>
+      <guid>https://nebelgrau77.github.io/categories/bootloader/</guid>
       <description></description>
     </item>
     <item>
       <title>Arduino</title>
-      <link>http://localhost:1313/categories/arduino/</link>
-      <pubDate>Sat, 13 Mar 2021 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/categories/arduino/</guid>
+      <link>https://nebelgrau77.github.io/categories/arduino/</link>
+      <pubDate>Wed, 15 Mar 2023 00:00:00 +0000</pubDate>
+      <guid>https://nebelgrau77.github.io/categories/arduino/</guid>
       <description></description>
     </item>
     <item>
       <title>Tinyml</title>
-      <link>http://localhost:1313/categories/tinyml/</link>
-      <pubDate>Sat, 13 Mar 2021 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/categories/tinyml/</guid>
+      <link>https://nebelgrau77.github.io/categories/tinyml/</link>
+      <pubDate>Wed, 15 Mar 2023 00:00:00 +0000</pubDate>
+      <guid>https://nebelgrau77.github.io/categories/tinyml/</guid>
       <description></description>
     </item>
     <item>
       <title>Blog</title>
-      <link>http://localhost:1313/categories/blog/</link>
-      <pubDate>Mon, 22 Feb 2021 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/categories/blog/</guid>
+      <link>https://nebelgrau77.github.io/categories/blog/</link>
+      <pubDate>Fri, 16 Sep 2022 00:00:00 +0000</pubDate>
+      <guid>https://nebelgrau77.github.io/categories/blog/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Test</title>
+      <link>https://nebelgrau77.github.io/categories/test/</link>
+      <pubDate>Fri, 16 Sep 2022 00:00:00 +0000</pubDate>
+      <guid>https://nebelgrau77.github.io/categories/test/</guid>
       <description></description>
     </item>
     <item>
       <title>Coding</title>
-      <link>http://localhost:1313/categories/coding/</link>
+      <link>https://nebelgrau77.github.io/categories/coding/</link>
       <pubDate>Sun, 14 Feb 2021 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/categories/coding/</guid>
+      <guid>https://nebelgrau77.github.io/categories/coding/</guid>
       <description></description>
     </item>
     <item>
       <title>Python</title>
-      <link>http://localhost:1313/categories/python/</link>
+      <link>https://nebelgrau77.github.io/categories/python/</link>
       <pubDate>Sun, 14 Feb 2021 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/categories/python/</guid>
+      <guid>https://nebelgrau77.github.io/categories/python/</guid>
       <description></description>
     </item>
   </channel>

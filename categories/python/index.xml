@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Python on nebelgrau</title>
-    <link>http://localhost:1313/categories/python/</link>
+    <link>https://nebelgrau77.github.io/categories/python/</link>
     <description>Recent content in Python on nebelgrau</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 14 Feb 2021 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/categories/python/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://nebelgrau77.github.io/categories/python/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hello, world!</title>
-      <link>http://localhost:1313/posts/helloworld/</link>
+      <link>https://nebelgrau77.github.io/posts/helloworld/</link>
       <pubDate>Sun, 14 Feb 2021 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/helloworld/</guid>
+      <guid>https://nebelgrau77.github.io/posts/helloworld/</guid>
       <description>&lt;p&gt;The ancient computer tradition requires the first post to be the &amp;ldquo;Hello, world!&amp;rdquo;&lt;/p&gt;</description>
     </item>
   </channel>

@@ -2,57 +2,90 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/posts/helloworld_again/</loc>
+    <loc>https://nebelgrau77.github.io/posts/helloworld_again/</loc>
     <lastmod>2025-08-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/</loc>
+    <loc>https://nebelgrau77.github.io/</loc>
     <lastmod>2025-08-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/</loc>
+    <loc>https://nebelgrau77.github.io/posts/</loc>
     <lastmod>2025-08-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/</loc>
+    <loc>https://nebelgrau77.github.io/categories/ble/</loc>
+    <lastmod>2023-03-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nebelgrau77.github.io/categories/bluetooth/</loc>
+    <lastmod>2023-03-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nebelgrau77.github.io/categories/</loc>
+    <lastmod>2023-03-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nebelgrau77.github.io/posts/data_over_ble/</loc>
+    <lastmod>2023-03-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nebelgrau77.github.io/categories/embedded/</loc>
+    <lastmod>2023-03-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nebelgrau77.github.io/categories/rust/</loc>
+    <lastmod>2023-03-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nebelgrau77.github.io/categories/adafruit/</loc>
+    <lastmod>2023-03-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nebelgrau77.github.io/categories/bootloader/</loc>
+    <lastmod>2023-03-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nebelgrau77.github.io/posts/bootloader_update/</loc>
+    <lastmod>2023-03-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nebelgrau77.github.io/categories/arduino/</loc>
+    <lastmod>2023-03-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nebelgrau77.github.io/posts/jailbreaking_blesense_sensors/</loc>
+    <lastmod>2023-03-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nebelgrau77.github.io/categories/tinyml/</loc>
+    <lastmod>2023-03-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nebelgrau77.github.io/categories/blog/</loc>
+    <lastmod>2022-09-16T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nebelgrau77.github.io/posts/comeback_test/</loc>
+    <lastmod>2022-09-16T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nebelgrau77.github.io/categories/test/</loc>
+    <lastmod>2022-09-16T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nebelgrau77.github.io/posts/rust_driver/</loc>
     <lastmod>2021-04-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/embedded/</loc>
-    <lastmod>2021-04-04T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/categories/rust/</loc>
-    <lastmod>2021-04-04T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/posts/rust_driver/</loc>
-    <lastmod>2021-04-04T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/posts/jailbreaking_blesense/</loc>
+    <loc>https://nebelgrau77.github.io/posts/jailbreaking_blesense/</loc>
     <lastmod>2021-03-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/arduino/</loc>
-    <lastmod>2021-03-13T00:00:00+00:00</lastmod>
+    <loc>https://nebelgrau77.github.io/posts/simplicity_blink/</loc>
+    <lastmod>2021-03-12T22:26:05+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/tinyml/</loc>
-    <lastmod>2021-03-13T00:00:00+00:00</lastmod>
+    <loc>https://nebelgrau77.github.io/posts/embedded_rust/</loc>
+    <lastmod>2021-02-22T21:26:10+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/about-this-blog/</loc>
+    <loc>https://nebelgrau77.github.io/posts/about-this-blog/</loc>
     <lastmod>2021-02-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/blog/</loc>
-    <lastmod>2021-02-22T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/categories/coding/</loc>
+    <loc>https://nebelgrau77.github.io/categories/coding/</loc>
     <lastmod>2021-02-14T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/helloworld/</loc>
+    <loc>https://nebelgrau77.github.io/posts/helloworld/</loc>
     <lastmod>2021-02-14T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/python/</loc>
+    <loc>https://nebelgrau77.github.io/categories/python/</loc>
     <lastmod>2021-02-14T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/about/about/</loc>
+    <loc>https://nebelgrau77.github.io/about/about/</loc>
     <lastmod>2021-02-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/about/</loc>
+    <loc>https://nebelgrau77.github.io/about/</loc>
     <lastmod>2021-02-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/</loc>
+    <loc>https://nebelgrau77.github.io/tags/</loc>
   </url>
 </urlset>
